@@ -1,0 +1,4 @@
+PLUGINS_NOT_ACTIVATED_ON_STARTUP=org.eclipse.m2e.discovery;
+eclipse.preferences.version=1
+editors=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<editors/>
+resourcetypes=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<editors version\="3.1"/>

@@ -1,0 +1,2 @@
+serviceClass: edu.rosehulman.loldb.client.GreetingService
+path: 07040F7FFA05C7593E8046E203F3DA93.gwt.rpc
