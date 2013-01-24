@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="C:\Users\Spencer\Documents\Courses\Senior Year\Winter Term\CSSE 333\Project\lol-db\LOLdb" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="C:\Users\Spencer\Documents\Courses\Senior Year\Winter Term\CSSE 333\Project\lol-db\LOLdb\war\WEB-INF\lib" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="OptionalMessageDialog.hide.">
 		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
 	</section>
@@ -47,8 +47,8 @@
 	</section>
 	<section name="NewClassWizardPage">
 		<item value="false" key="create_constructor"/>
-		<item value="false" key="create_main"/>
 		<item value="true" key="create_unimplemented"/>
+		<item value="false" key="create_main"/>
 	</section>
 	<section name="RenameInformationPopup">
 	</section>
