@@ -1,0 +1,34 @@
+package lol;
+
+public class Champion {
+	
+	private int mID;
+	private String mName;
+	private String mImagePath;
+	private int mHealth;
+	private int mHealthPerLevel;
+	private double mHealthRegen;
+	private double mHealthRegenPerLevel;
+	private int mResourceType;
+	private int mMana;
+	private double mManaPerLevel;
+	private double mManaRegen;
+	private double mManaRegenPerLevel;
+	private double mDamage;
+	private double mDamagePerLevel;
+	private double mAttackSpeed;
+	private double mAttackSpeedPerLevel;
+	private double mArmor;
+	private double mArmorPerLevel;
+	private int mMagicResist = 30;
+	private double mMagicResistPerLevel;
+	private int mMoveSpeed;
+	private int mAttackRange;
+	public int getmID() {
+		return mID;
+	}
+	public void setmID(int mID) {
+		this.mID = mID;
+	}
+
+}

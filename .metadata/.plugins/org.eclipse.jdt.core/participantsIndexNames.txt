@@ -1,0 +1,7 @@
+INDEX VERSION 1.126
+C:\Users\Spencer\Documents\Courses\Senior Year\Winter Term\CSSE 333\Project\lol-db\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3675795576.index
+\Guestbook\src
+C:\Users\Spencer\Documents\Courses\Senior Year\Winter Term\CSSE 333\Project\lol-db\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1762516151.index
+\LOLdb\src
+C:\Users\Spencer\Documents\Courses\Senior Year\Winter Term\CSSE 333\Project\lol-db\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3099953600.index
+\LOLdb\src

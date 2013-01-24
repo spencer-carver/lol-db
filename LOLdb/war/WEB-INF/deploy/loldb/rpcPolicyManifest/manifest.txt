@@ -1,3 +1,0 @@
-# Module loldb
-# RPC service class, partial path of RPC policy file
-edu.rosehulman.loldb.client.GreetingService, 07040F7FFA05C7593E8046E203F3DA93.gwt.rpc

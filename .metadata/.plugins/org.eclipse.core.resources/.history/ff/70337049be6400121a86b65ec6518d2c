@@ -1,0 +1,16 @@
+package edu.rosehulman.loldb;
+
+import edu.rosehulman.loldb.server.DataAccessObject;
+
+public class Test_DB_Calls {
+	
+	public void main() {
+		DataAccessObject dao = new DataAccessObject();
+		try {
+			dao.connect();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

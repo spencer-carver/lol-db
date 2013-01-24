@@ -1,0 +1,27 @@
+1359016407636	Rename resource 'guestbook.jsp'
+1359018459711	Copy file
+1359018480477	Move file
+1359018483964	Delete element
+1359027251326	Encapsulate field 'mID'
+1359027257861	Encapsulate field 'mName'
+1359027263645	Encapsulate field 'mImagePath'
+1359027268165	Encapsulate field 'mHealth'
+1359027273599	Encapsulate field 'mHealthPerLevel'
+1359027284796	Encapsulate field 'mHealthRegen'
+1359027290139	Encapsulate field 'mHealthRegenPerLevel'
+1359027294666	Encapsulate field 'mResourceType'
+1359027299083	Encapsulate field 'mMana'
+1359027302853	Encapsulate field 'mManaPerLevel'
+1359027307674	Encapsulate field 'mManaRegen'
+1359027311513	Encapsulate field 'mManaRegenPerLevel'
+1359027315951	Encapsulate field 'mDamage'
+1359027320078	Encapsulate field 'mDamagePerLevel'
+1359027323649	Encapsulate field 'mAttackSpeed'
+1359027327723	Encapsulate field 'mAttackSpeedPerLevel'
+1359027332790	Encapsulate field 'mArmor'
+1359027336596	Encapsulate field 'mArmorPerLevel'
+1359027340491	Encapsulate field 'mMagicResist'
+1359027344516	Encapsulate field 'mMagicResistPerLevel'
+1359027350375	Encapsulate field 'mMoveSpeed'
+1359027354687	Encapsulate field 'mAttackRange'
+1359031548824	Copy source folder

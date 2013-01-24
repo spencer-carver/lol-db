@@ -1,0 +1,41 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="com.google.appengine.api.rdbms.AppEngineDriver" %>
+
+<html>
+  <body>
+
+<%
+Connection c = null;
+c = DriverManager.getConnection("jdbc:google:rdbms://league-of-legends-db:league-of-legends-db/LOL");
+ResultSet rs = c.createStatement().executeQuery("SELECT ImagePath, Name FROM CHAMPIONS WHERE ID=1"); %>
+
+<table style="border: 1px solid black">
+<tbody>
+<tr>
+<th style="background-color: #CCFFCC; margin: 5px">Image</th>
+<th style="background-color: #CCFFCC; margin: 5px">Name</th>
+</tr> <%
+String image = rs.getString("ImagePath");
+String champName = rs.getString("Name");
+%>
+<tr>
+<td><img src="<%= image %>"></img></td>
+<td><%= champName %></td>
+</tr>
+<% c.close(); %>
+
+</tbody>
+</table>
+<br />
+<p><strong>Select a Champion!</strong></p>
+<form action="/sign" method="post">
+    <div>Query:
+    <br /><textarea name="query" rows="3" cols="60"></textarea>
+    </div>
+    <div><input type="submit" value="Post Greeting" /></div>
+    <input type="hidden" name="guestbookName" />
+  </form>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "C:\\Program Files\\Java\\jre6\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files\\Java\\jre6\\lib\\rt.jar",
+    "status": "RESOLVED"
+  },
+  "C:\\Users\\Spencer\\Documents\\Courses\\Senior Year\\Winter Term\\CSSE 333\\Project\\lol-db\\LOLdb\\src": {
+    "location": "C:\\Users\\Spencer\\Documents\\Courses\\Senior Year\\Winter Term\\CSSE 333\\Project\\lol-db\\LOLdb\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\Spencer\\Documents\\Courses\\Senior Year\\Winter Term\\CSSE 333\\Project\\lol-db\\LOLdb\\src\u0027. Skipped."
+  },
+  "C:\\Program Files\\Eclipse\\plugins\\com.google.gwt.eclipse.sdkbundle_2.5.0.v201212122042-rel-r42\\gwt-2.5.0\\gwt-user.jar": {
+    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.gwt.eclipse.sdkbundle_2.5.0.v201212122042-rel-r42\\gwt-2.5.0\\gwt-user.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Program Files\\Eclipse\\plugins\\com.google.gwt.eclipse.sdkbundle_2.5.0.v201212122042-rel-r42\\gwt-2.5.0\\gwt-user.jar\u0027. Neither fingerprint \u0027c5988f7804d970653d3a974ca13089c9682e10b5\u0027 nor symbolic name \u0027gwt-user\u0027 are known."
+  },
+  "C:\\Program Files\\Java\\jdk1.6.0_38\\jre\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files\\Java\\jdk1.6.0_38\\jre\\lib\\rt.jar",
+    "status": "RESOLVED"
+  },
+  "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\shared\\servlet-api.jar": {
+    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\shared\\servlet-api.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\shared\\servlet-api.jar\u0027. Neither fingerprint \u00273e1611f999df55596bf5b9acd5f27c81e58d67eb\u0027 nor symbolic name \u0027servlet-api\u0027 are known."
+  }
+}

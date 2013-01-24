@@ -1,0 +1,52 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="com.google.appengine.api.rdbms.AppEngineDriver" %>
+
+<html>
+  <body>
+
+<%
+Connection c = null;
+c = DriverManager.getConnection("jdbc:google:rdbms://league-of-legends-db:league-of-legends-db/LOL");
+ResultSet rs = c.createStatement().executeQuery("SELECT ImagePath, Name, Health, Mana, AttackSpeed, Range FROM CHAMPIONS WHERE ID=1"); %>
+
+<table style="border: 1px solid black">
+<tbody>
+<tr>
+<th style="background-color: #CCFFCC; margin: 5px">Image</th>
+<th style="background-color: #CCFFCC; margin: 5px">Name</th>
+<th style="background-color: #CCFFCC; margin: 5px">Health</th>
+<th style="background-color: #CCFFCC; margin: 5px">Mana</th>
+<th style="background-color: #CCFFCC; margin: 5px">Attack Speed</th>
+<th style="background-color: #CCFFCC; margin: 5px">Attack Range</th>
+</tr> <%
+String image = rs.getString("ImagePath");
+String champName = rs.getString("Name");
+int hp = rs.getInt("Health");
+int mana = rs.getInt("Mana");
+double as = rs.getDouble("AttackSpeed");
+int range = rs.getInt("AttackRange"); %>
+<tr>
+<td><img src="<%= content %>"></img></td>
+<td><%= champName %></td>
+<td><%= hp %></td>
+<td><%= mana %></td>
+<td><%= as %></td>
+<td><%= range %></td>
+</tr>
+<% c.close(); %>
+
+</tbody>
+</table>
+<br />
+<p><strong>Select a Champion!</strong></p>
+<form action="/sign" method="post">
+    <div>Query:
+    <br /><textarea name="query" rows="3" cols="60"></textarea>
+    </div>
+    <div><input type="submit" value="Post Greeting" /></div>
+    <input type="hidden" name="guestbookName" />
+  </form>
+  </body>
+</html>
