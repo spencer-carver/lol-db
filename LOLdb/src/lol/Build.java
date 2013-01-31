@@ -6,12 +6,12 @@ public class Build
 {
   private int bID;
 	private Champion champ;
-	private ArrayList<Glyph> glyphs;
-	private ArrayList<Mark> marks;
-	private ArrayList<Quintessence> quints;
-	private ArrayList<Seal> seals;
-	private ArrayList<Mastery> masteries;
-	private ArrayList<Item> items;
+	//private ArrayList<Glyph> glyphs;
+	//private ArrayList<Mark> marks;
+	//private ArrayList<Quintessence> quints;
+	//private ArrayList<Seal> seals;
+	//private ArrayList<Mastery> masteries;
+	//private ArrayList<Item> items;
 	private int level;
 
 	private double health;
@@ -63,9 +63,9 @@ public class Build
 	public void setLevel(int newLevel) { level = newLevel; }
 
 
-	public void linkRune(Rune rune);
-	public void linkMastery(Mastery mastery);
-	public void linkItem(Item item);
+	//public void linkRune(Rune rune);
+	//public void linkMastery(Mastery mastery);
+	//public void linkItem(Item item);
 
 	private double getHealth() { return health + level*healthPerLevel; }
 	private double getHealthRegen() {returun healthRegen + level*healthRegenLevel; }
