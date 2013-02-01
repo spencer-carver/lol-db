@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>League of Legends Theorycraft Tool</title>
+ 
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="app.js"></script>
+ 
+</head>
+<body>
+	<table>
+		<tr>
+			<td width="30%"><div id="champion_icon"></div></td><td width="70%">stats</td>
+		</tr>
+	</table>
+ 	<form id="get_champion_dropdown">
+    </form> 
+    <form id="get_champion_info">
+        <fieldset>
+            <legend>Select a Champion</legend>
+ 
+                <p>
+                    <div id="championDropdown"></div>
+                </p>
+                <p>
+                    <input id="myButton" type="button" value="Get Statistics" />
+                    <input id="addToBuild" type="button" value="Add to Build" />
+                </p>
+        </fieldset>
+    </form>
+    <div id="Results">
+        <fieldset>
+            <legend>Champion Information</legend>
+                 <div id="info_pane"></div>
+        </fieldset>
+    </div> 
+<footer>
+  <p>This web application is a work in progress.  Please be aware that information reflected in this application is kept as up-to-date as possible
+  by the developers, but may not be accurate, especially if a new patch has just recently been released.</p>
+  <p><time pubdate datetime="2013-01-31"></time></p>
+</footer>  
+</body>
+</html>

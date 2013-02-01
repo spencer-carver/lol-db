@@ -8,7 +8,11 @@ import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
 
 public class SignLOLServlet extends HttpServlet {
-    private static final Logger log = Logger.getLogger(SignLOLServlet.class.getName());
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final Logger log = Logger.getLogger(SignLOLServlet.class.getName());
 
     public void doPost(HttpServletRequest req, HttpServletResponse resp)
                 throws IOException {

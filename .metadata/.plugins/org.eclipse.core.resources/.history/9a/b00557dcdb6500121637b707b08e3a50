@@ -1,7 +1,0 @@
-package guestbook;
-
-import HttpServlet;
-
-public class GuestbookServlet extends HttpServlet {
-
-}

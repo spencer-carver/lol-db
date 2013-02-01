@@ -18,6 +18,16 @@
     <servlet-name>ChampionInfo</servlet-name>
     <url-pattern>/ChampionInfo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description>Get List of Champion Names - jQuery Ajax Request</description>
+    <display-name>ChampionNames</display-name>
+    <servlet-name>ChampionNames</servlet-name>
+    <servlet-class>lol.ChampionNames</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChampionNames</servlet-name>
+    <url-pattern>/ChampionNames</url-pattern>
+  </servlet-mapping>
  <servlet>
   <servlet-name>SystemServiceServlet</servlet-name>
   <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
