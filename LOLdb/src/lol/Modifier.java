@@ -4,8 +4,10 @@ public abstract class Modifier
 {
 	private int mID;
 	private String name;
-	private char guid;
+	private char guid;			public char getGuid() {	return guid; }
+		public void setGuid(char c) { guid = c; }
 	private double health; 			public double getHealth() { return health; }
+		public void setHealth(double h) { health = h; }
 	private double healthPerLevel; 		public double getHealthPerLevel() { return healthPerLevel; }
 	private double healthRegen;		public double getHealthRegen() { return healthRegen; }
 	private double healthRegenPerLevel;	public double getHealthRegenPerLevel() { return healthRegenPerLevel; }
@@ -23,8 +25,8 @@ public abstract class Modifier
 	private double magicResistPerLevel;	public double getMagicResistPerLevel() { return magicResistPerLevel; }
 	private double moveSpeed;		public double getMoveSpeed() { return moveSpeed; }
 	
-	public char getGuid()
+	public Modifier()
 	{
-		return guid;
+	
 	}
 }
