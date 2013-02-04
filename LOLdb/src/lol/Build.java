@@ -6,12 +6,12 @@ public class Build
 {
   private int bID;
 	private Champion champ;
-	//private ArrayList<Glyph> glyphs;
-	//private ArrayList<Mark> marks;
-	//private ArrayList<Quintessence> quints;
-	//private ArrayList<Seal> seals;
-	//private ArrayList<Mastery> masteries;
-	//private ArrayList<Item> items;
+	private ArrayList<Glyph> glyphs;
+	private ArrayList<Mark> marks;
+	private ArrayList<Quintessence> quints;
+	private ArrayList<Seal> seals;
+	private ArrayList<Mastery> masteries;
+	private ArrayList<Item> items;
 	private int level;
 
 	private double health;
