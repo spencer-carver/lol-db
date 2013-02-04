@@ -142,6 +142,16 @@ public class Build
 		}
 		return guid;
 	}
+	
+	public int getItemCost()
+	{
+		int cost = 0;
+		for(Item item : items)
+		{
+			cost += item.getCost();
+		}
+		return cost;
+	}
 
 	
 	public void linkRune(Rune rune)
