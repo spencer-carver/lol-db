@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Build
 {
-  private int bID;
+	private int bID;
 	private Champion champ;
 	private ArrayList<Glyph> glyphs; //9
 	private ArrayList<Mark> marks; //9
@@ -187,27 +187,26 @@ public class Build
 		linkModifier(item, 1);
 	}
 	
-	private void linkModifier(Modifier mod, int pos)
+	private void linkModifier(Modifier mod, double pos)
 	{
 		//pos = 1 for link, pos = -1 for delink
-		health += mod.health * pos;
-		healthPerLevel += mod.healthPerLevel * pos;
-		healthRegen += mod.healthRegen * pos;
-		healthRegenPerLevel += mod.healthRegenPerLevel * pos;
-		mana += mod.mana * pos;
-		manaPerLevel += mod.manaPerLevel * pos;
-		manaRegen += mod.manaRegen * pos;
-		manaRegenPerLevel += mod.manaRegenPerLevel * pos;
-		damage += mod.damage * pos;
-		damagePerLevel += mod.damagePerLevel * pos;
-		attackSpeed += mod.attackSpeed * pos;
-		attackSpeedPerLevel += mod.attackSpeedPerLevel * pos;
-		armor += mod.armor * pos;
-		armorPerLevel += mod.armorPerLevel * pos;
-		magicResist += mod.magicResist * pos;
-		magicResistPerLevel += mod.magicResistPerLevel * pos;
-		moveSpeed += mod.moveSpeed * pos;
-		attackRange += mod.attackRange * pos;
+		health += mod.getHealth() * pos;
+		healthPerLevel += mod.getHealthPerLevel() * pos;
+		healthRegen += mod.getHealthRegen() * pos;
+		healthRegenPerLevel += mod.getHealthRegenPerLevel() * pos;
+		mana += mod.getMana() * pos;
+		manaPerLevel += mod.getManaPerLevel() * pos;
+		manaRegen += mod.getManaRegen() * pos;
+		manaRegenPerLevel += mod.getManaRegenPerLevel() * pos;
+		damage += mod.getDamage() * pos;
+		damagePerLevel += mod.getDamagePerLevel() * pos;
+		attackSpeed += mod.getAttackSpeed() * pos;
+		attackSpeedPerLevel += mod.getAttackSpeedPerLevel() * pos;
+		armor += mod.getArmor() * pos;
+		armorPerLevel += mod.getArmorPerLevel() * pos;
+		magicResist += mod.getMagicResist() * pos;
+		magicResistPerLevel += mod.getMagicResistPerLevel() * pos;
+		moveSpeed += mod.getMoveSpeed() * pos;
 	}
 
 	public Champion getChampion() { return champion; }
