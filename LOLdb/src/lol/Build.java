@@ -32,6 +32,7 @@ public class Build
 	private double magicResist;
 	private double magicResistPerLevel;
 	private double moveSpeed;
+	private double moveSpeedMultiplier;
 	private double attackRange;
 
 	public Build(Champion champ)
@@ -57,6 +58,7 @@ public class Build
 		magicResist = champ.getmMagicResist();
 		magicResistPerLevel = champ.getmMagicResistPerLevel();
 		moveSpeed = champ.getmMoveSpeed();
+		moveSpeedMultiplier = 1;
 		attackRange = champ.getmAttackSpeed();
 	}
 
@@ -207,6 +209,14 @@ public class Build
 		magicResist += mod.getMagicResist() * pos;
 		magicResistPerLevel += mod.getMagicResistPerLevel() * pos;
 		moveSpeed += mod.getMoveSpeed() * pos;
+		if(pos == 1)
+		{
+			moveSpeedMultiplier *= mod.getMoveSpeedMultiplier();
+		}
+		else
+		{
+			moveSpeedMultiplier = moveSpeedMultiplier / mod.getMoveSpeedMultiplier();
+		}
 	}
 
 	public Champion getChampion() { return champion; }
@@ -218,7 +228,7 @@ public class Build
 	public double getAttackSpeed() { return attackSpeed + level*attackSpeedPerLevel; }
 	public double getArmor() { return armor + level*armorPerLevel; }
 	public double getMagicResist() { return magicResist + level*magicResistPerLevel; }
-	public double getMoveSpeed() { return moveSpeed; }
+	public double getMoveSpeed() { return moveSpeed * moveSpeedMultiplier; }
 	public double getAttackRange() { return attackRange; }
 
 }
