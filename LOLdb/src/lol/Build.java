@@ -63,20 +63,73 @@ public class Build
 	public void setLevel(int newLevel) { level = newLevel; }
 
 
-	//public void linkRune(Rune rune);
-	//public void linkMastery(Mastery mastery);
-	//public void linkItem(Item item);
+	
+	public void linkRune(Rune rune)
+	{
+		if(rune instanceof Glyph)
+		{
+			glyphs.add(rune);
+		}
+		if(rune instanceof Mark)
+		{
+			marks.add(rune);
+		}
+		if(rune instanceof Quintessence)
+		{
+			quints.add(rune);
+		}
+		if(rune instanceof Seal)
+		{
+			seals.add(rune);
+		}
+		linkModifier(rune, 1);
+	}
+	
+	public void linkMastery(Mastery mastery)
+	{
+		masteries.add(mastery);
+		linkModifier(mastery, 1);
+	}
+	
+	public void linkItem(Item item)
+	{
+		items.add(item);
+		linkModifier(item, 1);
+	}
+	
+	private void linkModifier(Modifier mod, int pos)
+	{
+		//pos = 1 for link, pos = -1 for delink
+		health += mod.health * pos;
+		healthPerLevel += mod.healthPerLevel * pos;
+		healthRegen += mod.healthRegen * pos;
+		healthRegenPerLevel += mod.healthRegenPerLevel * pos;
+		mana += mod.mana * pos;
+		manaPerLevel += mod.manaPerLevel * pos;
+		manaRegen += mod.manaRegen * pos;
+		manaRegenPerLevel += mod.manaRegenPerLevel * pos;
+		damage += mod.damage * pos;
+		damagePerLevel += mod.damagePerLevel * pos;
+		attackSpeed += mod.attackSpeed * pos;
+		attackSpeedPerLevel += mod.attackSpeedPerLevel * pos;
+		armor += mod.armor * pos;
+		armorPerLevel += mod.armorPerLevel * pos;
+		magicResist += mod.magicResist * pos;
+		magicResistPerLevel += mod.magicResistPerLevel * pos;
+		moveSpeed += mod.moveSpeed * pos;
+		attackRange += mod.attackRange * pos;
+	}
 
-	private double getHealth() { return health + level*healthPerLevel; }
-	private double getHealthRegen() {returun healthRegen + level*healthRegenLevel; }
-	//private double resourceType;
-	private double getMana() { return mana + level*manaPerLevel; }
-	private double getManaRegen() { return manaRegen + level*manaRegenPerLevel; }
-	private double getDamage() { return damage + level*damagePerLevel; }
-	private double getAttackSpeed() { return attackSpeed + level*attackSpeedPerLevel; }
-	private double getArmor() { return armor + level*armorPerLevel; }
-	private double getMagicResist() { return magicResist + level*magicResistPerLevel; }
-	private double getMoveSpeed() { return moveSpeed; }
-	private double getAttackRange() { return attackRange; }
+	public Champion getChampion() { return champion; }
+	public double getHealth() { return health + level*healthPerLevel; }
+	public double getHealthRegen() {returun healthRegen + level*healthRegenLevel; }
+	public double getMana() { return mana + level*manaPerLevel; }
+	public double getManaRegen() { return manaRegen + level*manaRegenPerLevel; }
+	public double getDamage() { return damage + level*damagePerLevel; }
+	public double getAttackSpeed() { return attackSpeed + level*attackSpeedPerLevel; }
+	public double getArmor() { return armor + level*armorPerLevel; }
+	public double getMagicResist() { return magicResist + level*magicResistPerLevel; }
+	public double getMoveSpeed() { return moveSpeed; }
+	public double getAttackRange() { return attackRange; }
 
 }
