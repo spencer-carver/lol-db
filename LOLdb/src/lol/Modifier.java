@@ -27,6 +27,25 @@ public abstract class Modifier
 	
 	public Modifier()
 	{
-	
+		mID = 0;
+		name = "Placeholder";
+		guid = '0';
+		health = 0;
+		healthPerLevel = 0;
+		healthRegen = 0;
+		healthRegenPerLevel = 0;
+		mana = 0;
+		manaPerLevel = 0;
+		manaRegen = 0;
+		manaRegenPerLevel = 0;
+		damage = 0;
+		damagePerLevel = 0;
+		attackSpeed = 0;
+		attackSpeedPerLevel = 0;
+		armor = 0;
+		armorPerLevel = 0;
+		magicResist = 0;
+		magicResistPerLevel = 0;
+		moveSpeed = 0;
 	}
 }
