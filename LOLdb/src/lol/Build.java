@@ -6,12 +6,12 @@ public class Build
 {
   private int bID;
 	private Champion champ;
-	private ArrayList<Glyph> glyphs;
-	private ArrayList<Mark> marks;
-	private ArrayList<Quintessence> quints;
-	private ArrayList<Seal> seals;
-	private ArrayList<Mastery> masteries;
-	private ArrayList<Item> items;
+	private ArrayList<Glyph> glyphs; //9
+	private ArrayList<Mark> marks; //9
+	private ArrayList<Quintessence> quints; //3
+	private ArrayList<Seal> seals; //9
+	private ArrayList<Mastery> masteries; //30
+	private ArrayList<Item> items; //6
 	private int level;
 
 	private double health;
@@ -62,6 +62,86 @@ public class Build
 
 	public void setLevel(int newLevel) { level = newLevel; }
 
+	public String getGuid()
+	{
+		String guid = "";
+		char g;
+		g = champion.getGuid();
+		guid += g;
+		for(int i = 0; i < 6; i++)
+		{
+			if(items.get(i) != null)
+			{
+				g = items.get(i).getGuid();
+				guid += g;
+			}
+			else
+			{
+				guid += '0';
+			}
+		}
+		for(int i = 0; i < 9; i++)
+		{
+			if(glyphs.get(i) != null)
+			{
+				g = glyphs.get(i).getGuid();
+				guid += g;
+			}
+			else
+			{
+				guid += '0';
+			}
+		}
+		for(int i = 0; i < 9; i++)
+		{
+			if(marks.get(i) != null)
+			{
+				g = marks.get(i).getGuid();
+				guid += g;
+			}
+			else
+			{
+				guid += '0';
+			}
+		}
+		for(int i = 0; i < 9; i++)
+		{
+			if(seals.get(i) != null)
+			{
+				g = seals.get(i).getGuid();
+				guid += g;
+			}
+			else
+			{
+				guid += '0';
+			}
+		}
+		for(int i = 0; i < 3; i++)
+		{
+			if(quints.get(i) != null)
+			{
+				g = quints.get(i).getGuid();
+				guid += g;
+			}
+			else
+			{
+				guid += '0';
+			}
+		}
+		for(int i = 0; i < 30; i++)
+		{
+			if(masteries.get(i) != null)
+			{
+				g = masteries.get(i).getGuid();
+				guid += g;
+			}
+			else
+			{
+				guid += '0';
+			}
+		}
+		return guid;
+	}
 
 	
 	public void linkRune(Rune rune)
