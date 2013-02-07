@@ -6,6 +6,7 @@ public abstract class Modifier {
 	private char guid;
 
 	public char getGuid() {
+		guid = (char) mID;
 		return guid;
 	}
 
