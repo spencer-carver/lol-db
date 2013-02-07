@@ -1,5 +1,18 @@
 [
   {
+    "symbolicName": "org.datanucleus.api.jdo",
+    "version": {
+      "major": 3,
+      "minor": 1,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e1c53ac9a9a0867da9f4136b8df58173c2d5b170",
+    "jarFileModificationDate": "2012-12-11T06:01:16-05:00",
+    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\opt\\user\\datanucleus\\v2\\datanucleus-api-jdo-3.1.1.jar",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -13,16 +26,16 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "org.datanucleus.api.jdo",
+    "symbolicName": "appengine-api-1.0-sdk-1.7.4",
     "version": {
-      "major": 3,
-      "minor": 1,
-      "micro": 1,
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "e1c53ac9a9a0867da9f4136b8df58173c2d5b170",
+    "jarFileFingerprint": "df417753e435e5433e67d0b833119583a807f8ca",
     "jarFileModificationDate": "2012-12-11T06:01:16-05:00",
-    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\opt\\user\\datanucleus\\v2\\datanucleus-api-jdo-3.1.1.jar",
+    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\user\\appengine-api-1.0-sdk-1.7.4.jar",
     "javaRuntime": false
   },
   {
@@ -39,16 +52,16 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "appengine-api-1.0-sdk-1.7.4",
+    "symbolicName": "repackaged-appengine-ant-launcher-1.7.1",
     "version": {
       "major": -1,
       "minor": -1,
       "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "df417753e435e5433e67d0b833119583a807f8ca",
-    "jarFileModificationDate": "2012-12-11T06:01:16-05:00",
-    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\user\\appengine-api-1.0-sdk-1.7.4.jar",
+    "jarFileFingerprint": "c639bfb44abc9da61916e248958dcd0a4f4a155b",
+    "jarFileModificationDate": "2012-12-11T06:01:14-05:00",
+    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\shared\\jsp\\repackaged-appengine-ant-launcher-1.7.1.jar",
     "javaRuntime": false
   },
   {
@@ -65,17 +78,17 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "repackaged-appengine-ant-launcher-1.7.1",
+    "symbolicName": "jre",
     "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "c639bfb44abc9da61916e248958dcd0a4f4a155b",
-    "jarFileModificationDate": "2012-12-11T06:01:14-05:00",
-    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\shared\\jsp\\repackaged-appengine-ant-launcher-1.7.1.jar",
-    "javaRuntime": false
+    "jarFileFingerprint": "76a040c690b95100055cd4359adb46bf83a2c7ab",
+    "jarFileModificationDate": "2013-01-15T12:36:28.575-05:00",
+    "location": "C:\\Program Files\\Java\\jre6\\lib\\resources.jar",
+    "javaRuntime": true
   },
   {
     "symbolicName": "javax.validation.validation-api",
@@ -89,19 +102,6 @@
     "jarFileModificationDate": "2012-12-12T18:02:46-05:00",
     "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.gwt.eclipse.sdkbundle_2.5.0.v201212122042-rel-r42\\gwt-2.5.0\\validation-api-1.0.0.GA.jar",
     "javaRuntime": false
-  },
-  {
-    "symbolicName": "jre",
-    "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "76a040c690b95100055cd4359adb46bf83a2c7ab",
-    "jarFileModificationDate": "2013-01-15T12:36:28.575-05:00",
-    "location": "C:\\Program Files\\Java\\jre6\\lib\\resources.jar",
-    "javaRuntime": true
   },
   {
     "symbolicName": "jre",
@@ -403,19 +403,6 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "jre",
-    "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "b7a0d741b8bca019d9ee5a2ba8d56ad1896bd764",
-    "jarFileModificationDate": "2013-01-23T23:00:01.046-05:00",
-    "location": "C:\\Program Files\\Java\\jdk1.6.0_38\\jre\\lib\\rt.jar",
-    "javaRuntime": true
-  },
-  {
     "symbolicName": "javax.jdo",
     "version": {
       "major": 3,
@@ -436,9 +423,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "2357317d1e1f14937b3bda942c58791ee1dba581",
-    "jarFileModificationDate": "2013-01-23T22:59:50.338-05:00",
-    "location": "C:\\Program Files\\Java\\jdk1.6.0_38\\jre\\lib\\ext\\sunjce_provider.jar",
+    "jarFileFingerprint": "b7a0d741b8bca019d9ee5a2ba8d56ad1896bd764",
+    "jarFileModificationDate": "2013-01-23T23:00:01.046-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.6.0_38\\jre\\lib\\rt.jar",
     "javaRuntime": true
   },
   {
@@ -449,9 +436,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "70e3f9e76e3d5884415516c0cee0855295bcb571",
-    "jarFileModificationDate": "2013-01-23T22:59:50.519-05:00",
-    "location": "C:\\Program Files\\Java\\jdk1.6.0_38\\jre\\lib\\jce.jar",
+    "jarFileFingerprint": "2357317d1e1f14937b3bda942c58791ee1dba581",
+    "jarFileModificationDate": "2013-01-23T22:59:50.338-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.6.0_38\\jre\\lib\\ext\\sunjce_provider.jar",
     "javaRuntime": true
   },
   {
@@ -468,6 +455,19 @@
     "javaRuntime": false
   },
   {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "70e3f9e76e3d5884415516c0cee0855295bcb571",
+    "jarFileModificationDate": "2013-01-23T22:59:50.519-05:00",
+    "location": "C:\\Program Files\\Java\\jdk1.6.0_38\\jre\\lib\\jce.jar",
+    "javaRuntime": true
+  },
+  {
     "symbolicName": "appengine-jsr107cache-1.7.4",
     "version": {
       "major": -1,
@@ -478,19 +478,6 @@
     "jarFileFingerprint": "d7ce487f386902e9b0729384f50102915c9438c1",
     "jarFileModificationDate": "2012-12-11T06:01:16-05:00",
     "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\opt\\user\\jsr107\\v1\\appengine-jsr107cache-1.7.4.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "gwt-user",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "c5988f7804d970653d3a974ca13089c9682e10b5",
-    "jarFileModificationDate": "2012-12-12T18:02:42-05:00",
-    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.gwt.eclipse.sdkbundle_2.5.0.v201212122042-rel-r42\\gwt-2.5.0\\gwt-user.jar",
     "javaRuntime": false
   },
   {
@@ -507,16 +494,29 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "jta-1.1",
+    "symbolicName": "gwt-user",
     "version": {
       "major": -1,
       "minor": -1,
       "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "2ca09f0b36ca7d71b762e14ea2ff09d5eac57558",
-    "jarFileModificationDate": "2012-12-11T06:01:16-05:00",
-    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\opt\\user\\datanucleus\\v2\\jta-1.1.jar",
+    "jarFileFingerprint": "c5988f7804d970653d3a974ca13089c9682e10b5",
+    "jarFileModificationDate": "2012-12-12T18:02:42-05:00",
+    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.gwt.eclipse.sdkbundle_2.5.0.v201212122042-rel-r42\\gwt-2.5.0\\gwt-user.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "appengine-local-runtime-shared",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0c70b15876446c2ebdba1ef5ef72fddd6fe9b8e2",
+    "jarFileModificationDate": "2012-12-11T06:01:14-05:00",
+    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\shared\\appengine-local-runtime-shared.jar",
     "javaRuntime": false
   },
   {
@@ -533,16 +533,16 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "appengine-local-runtime-shared",
+    "symbolicName": "jta-1.1",
     "version": {
       "major": -1,
       "minor": -1,
       "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "0c70b15876446c2ebdba1ef5ef72fddd6fe9b8e2",
-    "jarFileModificationDate": "2012-12-11T06:01:14-05:00",
-    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\shared\\appengine-local-runtime-shared.jar",
+    "jarFileFingerprint": "2ca09f0b36ca7d71b762e14ea2ff09d5eac57558",
+    "jarFileModificationDate": "2012-12-11T06:01:16-05:00",
+    "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\opt\\user\\datanucleus\\v2\\jta-1.1.jar",
     "javaRuntime": false
   },
   {
@@ -572,19 +572,6 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "com.google.gson",
-    "version": {
-      "major": 2,
-      "minor": 1,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "2e66da15851f9f5b5079228f856c2f090ba98c38",
-    "jarFileModificationDate": "2013-01-23T22:38:05.381-05:00",
-    "location": "C:\\Users\\Spencer\\Documents\\Courses\\Senior Year\\Winter Term\\CSSE 333\\Project\\lol-db\\LOLdb\\war\\WEB-INF\\lib\\gson-2.1.jar",
-    "javaRuntime": false
-  },
-  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -596,5 +583,18 @@
     "jarFileModificationDate": "2013-01-15T12:36:28.363-05:00",
     "location": "C:\\Program Files\\Java\\jre6\\lib\\ext\\sunmscapi.jar",
     "javaRuntime": true
+  },
+  {
+    "symbolicName": "com.google.gson",
+    "version": {
+      "major": 2,
+      "minor": 1,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2e66da15851f9f5b5079228f856c2f090ba98c38",
+    "jarFileModificationDate": "2013-01-23T22:38:05.381-05:00",
+    "location": "C:\\Users\\Spencer\\Documents\\Courses\\Senior Year\\Winter Term\\CSSE 333\\Project\\lol-db\\LOLdb\\war\\WEB-INF\\lib\\gson-2.1.jar",
+    "javaRuntime": false
   }
 ]

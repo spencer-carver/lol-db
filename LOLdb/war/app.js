@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	
+	var champion_data;
+	
 	//get the form data and then serialize that
     dataString = $("#get_champion_dropdown").serialize();
     
@@ -58,14 +60,16 @@ $(document).ready(function() {
     });
     
     //checks for the button click event
-    $("#addToBuild").click(function(e) {
-    	var loaded_img = document.getElementById('info_icon');
-    	var build_img = document.getElementById('build_icon');
-    	build_img.innerHTML = loaded_img.innerHTML;
+    $("#addChampToBuild").click(function(e) {
+    	//var loaded_val = document.getElementById('info_icon');
+    	//var build_val = document.getElementById('build_icon');
+    	//build_val.innerHTML = loaded_val.innerHTML;
+    	$("#build_icon").html("").append("<img src=\"" + champion_data.mImagePath + "\"></img>");
+    	//$('#build_name').html("").append(""+champion_data.mName);
     });
     
     //checks for the button click event
-    $("#myButton").click(function(e){
+    $("#getChampion").click(function(e){
            
             //get the form data and then serialize that
             dataString = $("#get_champion_info").serialize();
@@ -86,6 +90,7 @@ $(document).ready(function() {
                 success: function( data, textStatus, jqXHR) {
                     //our country code was correct so we have some information to display
                      if(data.success){
+                    	 champion_data = data.championInfo;
                          $("#info_icon").html("").append("<img src=\"" + data.championInfo.mImagePath + "\"></img><br/>");
                          $("#info_name").html("").append("<b>Champion Name:</b> " + data.championInfo.mName + "<br/>");
                          $("#info_hp").html("").append("<b>Health:</b> " + data.championInfo.mHealth + "<br/>");
@@ -109,14 +114,14 @@ $(document).ready(function() {
                      } 
                      //display error message
                      else {
-                    	 $("#info_pane").html("<div><b>Champion Information could not be found.</b></div>");
+                    	 $("#champion_info_pane").html("<div><b>Champion Information could not be found.</b></div>");
                      }
                 },
                 
                 //If there was no resonse from the server
                 error: function(jqXHR, textStatus, errorThrown){
                      console.log("Something really bad happened " + textStatus);
-                     $("#info_pane").html(jqXHR.responseText);
+                     $("#champion_info_pane").html(jqXHR.responseText);
                 },
                 
                 //capture the request before it was sent to server
@@ -124,14 +129,68 @@ $(document).ready(function() {
                     //adding some Dummy data to the request
                     settings.data += "&dummyData=whatever";
                     //disable the button until we get the response
-                    $('#myButton').attr("disabled", true);
+                    $('#getChampion').attr("disabled", true);
                 },
                 
                 //this is called after the response or error functions are finsihed
                 //so that we can take some action
                 complete: function(jqXHR, textStatus){
                     //enable the button 
-                    $('#myButton').attr("disabled", false);
+                    $('#getChampion').attr("disabled", false);
+                }
+      
+            });        
+    });
+    
+  //checks for the button click event
+    $("#getItem").click(function(e){
+           
+            //get the form data and then serialize that
+            dataString = $("#get_item_info").serialize();
+            
+            //get the form data using another method 
+            var itemnName = $("#getItem").text(); 
+            dataString = "itemName=" + itemName;
+            
+            //make the AJAX request, dataType is set to json
+            //meaning we are expecting JSON data in response from the server
+            $.ajax({
+                type: "POST",
+                url: "ItemInfo",
+                data: dataString,
+                dataType: "json",
+                
+                //if received a response from the server
+                success: function( data, textStatus, jqXHR) {
+                    //our country code was correct so we have some information to display
+                     if(data.success){
+                         $('#item_info_pane').html(""+data.itemInfo.name);
+                     } 
+                     //display error message
+                     else {
+                    	 $("#item_info_pane").html("<b>Item Information could not be found.</b>");
+                     }
+                },
+                
+                //If there was no resonse from the server
+                error: function(jqXHR, textStatus, errorThrown){
+                     console.log("Something really bad happened " + textStatus);
+                     $("#item_info_pane").html(jqXHR.responseText);
+                },
+                
+                //capture the request before it was sent to server
+                beforeSend: function(jqXHR, settings){
+                    //adding some Dummy data to the request
+                    settings.data += "&dummyData=whatever";
+                    //disable the button until we get the response
+                    $('#getItem').attr("disabled", true);
+                },
+                
+                //this is called after the response or error functions are finsihed
+                //so that we can take some action
+                complete: function(jqXHR, textStatus){
+                    //enable the button 
+                    $('#getItem').attr("disabled", false);
                 }
       
             });        

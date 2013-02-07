@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>League of Legends Theorycraft Tool</title>
+
+<link
+	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+	rel="stylesheet" type="text/css" />
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"
+	type="text/javascript"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+	type="text/javascript"></script>
+<script type="text/javascript" src="app.js"></script>
+<style type="text/css">
+
+.set_champion_button {
+	width: 120px;
+}
+
+.set_item_button {
+	width: 80px;
+}
+.build_fieldset {
+	font-size: 20pt;
+	color: red;
+	background-color: #BBBBBB;
+	color: red;
+}
+
+.left {
+	font-size: 20pt;
+}
+
+.item_image {
+	width: 100px;
+}
+</style>
+</head>
+<body>
+	<fieldset class="build_fieldset">
+		<legend>Build Details</legend>
+		<table border="2" cellspacing="10">
+			<tr>
+				<td><div id="build_icon">
+						<img
+							src="http://images1.wikia.nocookie.net/__cb20120730015739/leagueoflegends/images/thumb/9/95/ChampionSquare.png/120px-ChampionSquare.png" />
+					</div>
+					<div id="build_name"></div> 
+					<input id="addChampToBuild" type="button" value="Set Champion" class="set_champion_button" />
+					<form id="save_build"></form>
+					<form id="load_build"></form></td>
+				<td>
+					<table border="2" cellspacing="12">
+						<tr>
+							<td><div id="build_item_1" class="item_image">
+									<img
+										src="http://images2.wikia.nocookie.net/__cb20091014182736/leagueoflegends/images/8/83/Infinity_Edge.gif" />
+									<input id="addI1ToBuild" type="button" value="Set Item 1" class="set_item_button" />
+								</div></td>
+							<td><div id="build_item_2">item 2</div>
+							<input id="addI2ToBuild" type="button" value="Set Item 2" class="set_item_button" /></td>
+							<td><div id="build_item_3">item 3</div>
+							<input id="addI3ToBuild" type="button" value="Set Item 3" class="set_item_button" /></td>
+							<td><div id="build_item_4">item 4</div>
+							<input id="addI4ToBuild" type="button" value="Set Item 4" class="set_item_button" /></td>
+							<td><div id="build_item_5">item 5</div>
+							<input id="addI5ToBuild" type="button" value="Set Item 5" class="set_item_button" /></td>
+							<td><div id="build_item_6">item 6</div>
+							<input id="addI6ToBuild" type="button" value="Set Item 6" class="set_item_button" /></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	<form id="get_champion_dropdown"></form>
+	<table>
+		<tr>
+			<td>
+				<form id="get_champion_info">
+					<fieldset>
+						<legend>Select a Champion</legend>
+
+						<p>
+						<div id="championDropdown"></div>
+						</p>
+						<p>
+							<input id="myButton" type="button" value="Get Statistics" />
+						</p>
+					</fieldset>
+					<div id="Results">
+						<fieldset>
+							<legend>Champion Information</legend>
+							<div id="info_pane">
+								<div id="info_icon"></div>
+								<div id="info_name"></div>
+								<div id="info_hp"></div>
+								<div id="info_hp_lv"></div>
+								<div id="info_hp5"></div>
+								<div id="info_hp5_lv"></div>
+								<div id="info_mana"></div>
+								<div id="info_mana_lv"></div>
+								<div id="info_mana5"></div>
+								<div id="info_mana5_lv"></div>
+								<div id="info_damage"></div>
+								<div id="info_damage_lv"></div>
+								<div id="info_attackspeed"></div>
+								<div id="info_attackspeed_lv"></div>
+								<div id="info_armor"></div>
+								<div id="info_armor_lv"></div>
+								<div id="info_mr"></div>
+								<div id="info_mr_lv"></div>
+								<div id="info_movespeed"></div>
+								<div id="info_range"></div>
+							</div>
+						</fieldset>
+					</div>
+				</form>
+			</td>
+			<td></td>
+		</tr>
+	</table>
+	<footer>
+		<p>This web application is a work in progress. Please be aware
+			that information reflected in this application is kept as up-to-date
+			as possible by the developers, but may not be accurate, especially if
+			a new patch has just recently been released.</p>
+		<p>
+			<time pubdate datetime="2013-01-31"></time>
+		</p>
+	</footer>
+</body>
+</html>

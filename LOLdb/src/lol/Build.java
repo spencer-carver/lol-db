@@ -2,16 +2,15 @@ package lol;
 
 import java.util.ArrayList;
 
-public class Build
-{
+public class Build {
 	private int bID;
-	private Champion champ;
-	private ArrayList<Glyph> glyphs; //9
-	private ArrayList<Mark> marks; //9
-	private ArrayList<Quintessence> quints; //3
-	private ArrayList<Seal> seals; //9
-	private ArrayList<Mastery> masteries; //30
-	private ArrayList<Item> items; //6
+	private Champion champion;
+	private ArrayList<Glyph> glyphs; // 9
+	private ArrayList<Mark> marks; // 9
+	private ArrayList<Quintessence> quints; // 3
+	private ArrayList<Seal> seals; // 9
+	private ArrayList<Mastery> masteries; // 30
+	private ArrayList<Item> items; // 6
 	private int level;
 
 	private double health;
@@ -35,11 +34,10 @@ public class Build
 	private double moveSpeedMultiplier;
 	private double attackRange;
 
-	public Build(Champion champ)
-	{
+	public Build(Champion champ) {
 		level = 1;
 
-		this.champ = champ;
+		this.champion = champ;
 		health = champ.getmHealth();
 		healthPerLevel = champ.getmHealthPerLevel();
 		healthRegen = champ.getmHealthRegen();
@@ -62,136 +60,102 @@ public class Build
 		attackRange = champ.getmAttackSpeed();
 	}
 
-	public void setLevel(int newLevel) { level = newLevel; }
+	public void setLevel(int newLevel) {
+		level = newLevel;
+	}
 
-	public String getGuid()
-	{
+	public String getGuid() {
 		String guid = "";
 		char g;
 		g = champion.getGuid();
 		guid += g;
-		for(int i = 0; i < 6; i++)
-		{
-			if(items.get(i) != null)
-			{
+		for (int i = 0; i < 6; i++) {
+			if (items.get(i) != null) {
 				g = items.get(i).getGuid();
 				guid += g;
-			}
-			else
-			{
+			} else {
 				guid += '0';
 			}
 		}
-		for(int i = 0; i < 9; i++)
-		{
-			if(glyphs.get(i) != null)
-			{
+		for (int i = 0; i < 9; i++) {
+			if (glyphs.get(i) != null) {
 				g = glyphs.get(i).getGuid();
 				guid += g;
-			}
-			else
-			{
+			} else {
 				guid += '0';
 			}
 		}
-		for(int i = 0; i < 9; i++)
-		{
-			if(marks.get(i) != null)
-			{
+		for (int i = 0; i < 9; i++) {
+			if (marks.get(i) != null) {
 				g = marks.get(i).getGuid();
 				guid += g;
-			}
-			else
-			{
+			} else {
 				guid += '0';
 			}
 		}
-		for(int i = 0; i < 9; i++)
-		{
-			if(seals.get(i) != null)
-			{
+		for (int i = 0; i < 9; i++) {
+			if (seals.get(i) != null) {
 				g = seals.get(i).getGuid();
 				guid += g;
-			}
-			else
-			{
+			} else {
 				guid += '0';
 			}
 		}
-		for(int i = 0; i < 3; i++)
-		{
-			if(quints.get(i) != null)
-			{
+		for (int i = 0; i < 3; i++) {
+			if (quints.get(i) != null) {
 				g = quints.get(i).getGuid();
 				guid += g;
-			}
-			else
-			{
+			} else {
 				guid += '0';
 			}
 		}
-		for(int i = 0; i < 30; i++)
-		{
-			if(masteries.get(i) != null)
-			{
+		for (int i = 0; i < 30; i++) {
+			if (masteries.get(i) != null) {
 				g = masteries.get(i).getGuid();
 				guid += g;
-			}
-			else
-			{
+			} else {
 				guid += '0';
 			}
 		}
 		return guid;
 	}
-	
-	public int getItemCost()
-	{
+
+	public int getItemCost() {
 		int cost = 0;
-		for(Item item : items)
-		{
+		for (Item item : items) {
 			cost += item.getCost();
 		}
 		return cost;
 	}
 
-	
-	public void linkRune(Rune rune)
-	{
-		if(rune instanceof Glyph)
-		{
-			glyphs.add(rune);
+	public void linkRune(Rune rune) {
+		if (rune instanceof Glyph) {
+			glyphs.add((Glyph) rune);
 		}
-		if(rune instanceof Mark)
-		{
-			marks.add(rune);
+		if (rune instanceof Mark) {
+			marks.add((Mark) rune);
 		}
-		if(rune instanceof Quintessence)
-		{
-			quints.add(rune);
+		if (rune instanceof Quintessence) {
+			quints.add((Quintessence) rune);
 		}
-		if(rune instanceof Seal)
-		{
-			seals.add(rune);
+		if (rune instanceof Seal) {
+			seals.add((Seal) rune);
 		}
 		linkModifier(rune, 1);
 	}
-	
-	public void linkMastery(Mastery mastery)
-	{
+
+	public void linkMastery(Mastery mastery) {
 		masteries.add(mastery);
 		linkModifier(mastery, 1);
 	}
-	
-	public void linkItem(Item item)
-	{
+
+	public void linkItem(Item item) {
 		items.add(item);
 		linkModifier(item, 1);
 	}
-	
-	private void linkModifier(Modifier mod, double pos)
-	{
-		//pos = 1 for link, pos = -1 for delink
+
+	private void linkModifier(Modifier mod, double pos) {
+		// pos = 1 for link, pos = -1 for delink
 		health += mod.getHealth() * pos;
 		healthPerLevel += mod.getHealthPerLevel() * pos;
 		healthRegen += mod.getHealthRegen() * pos;
@@ -209,26 +173,56 @@ public class Build
 		magicResist += mod.getMagicResist() * pos;
 		magicResistPerLevel += mod.getMagicResistPerLevel() * pos;
 		moveSpeed += mod.getMoveSpeed() * pos;
-		if(pos == 1)
-		{
+		if (pos == 1) {
 			moveSpeedMultiplier *= mod.getMoveSpeedMultiplier();
-		}
-		else
-		{
-			moveSpeedMultiplier = moveSpeedMultiplier / mod.getMoveSpeedMultiplier();
+		} else {
+			moveSpeedMultiplier = moveSpeedMultiplier
+					/ mod.getMoveSpeedMultiplier();
 		}
 	}
 
-	public Champion getChampion() { return champion; }
-	public double getHealth() { return health + level*healthPerLevel; }
-	public double getHealthRegen() {returun healthRegen + level*healthRegenLevel; }
-	public double getMana() { return mana + level*manaPerLevel; }
-	public double getManaRegen() { return manaRegen + level*manaRegenPerLevel; }
-	public double getDamage() { return damage + level*damagePerLevel; }
-	public double getAttackSpeed() { return attackSpeed + level*attackSpeedPerLevel; }
-	public double getArmor() { return armor + level*armorPerLevel; }
-	public double getMagicResist() { return magicResist + level*magicResistPerLevel; }
-	public double getMoveSpeed() { return moveSpeed * moveSpeedMultiplier; }
-	public double getAttackRange() { return attackRange; }
+	public Champion getChampion() {
+		return champion;
+	}
+
+	public double getHealth() {
+		return health + level * healthPerLevel;
+	}
+
+	public double getHealthRegen() {
+		return healthRegen + level * healthRegenPerLevel;
+	}
+
+	public double getMana() {
+		return mana + level * manaPerLevel;
+	}
+
+	public double getManaRegen() {
+		return manaRegen + level * manaRegenPerLevel;
+	}
+
+	public double getDamage() {
+		return damage + level * damagePerLevel;
+	}
+
+	public double getAttackSpeed() {
+		return attackSpeed + level * attackSpeedPerLevel;
+	}
+
+	public double getArmor() {
+		return armor + level * armorPerLevel;
+	}
+
+	public double getMagicResist() {
+		return magicResist + level * magicResistPerLevel;
+	}
+
+	public double getMoveSpeed() {
+		return moveSpeed * moveSpeedMultiplier;
+	}
+
+	public double getAttackRange() {
+		return attackRange;
+	}
 
 }
