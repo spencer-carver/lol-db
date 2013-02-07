@@ -59,9 +59,8 @@ $(document).ready(function() {
     
     //checks for the button click event
     $("#addToBuild").click(function(e) {
-    	var loaded_img = document.getElementById('info_icon');
-    	var build_img = document.getElementById('build_icon');
-    	build_img.innerHTML = loaded_img.innerHTML;
+    	$("#champion_icon").html("");
+    	$("#champion_icon").append("image load");
     });
     
     //checks for the button click event
@@ -89,21 +88,21 @@ $(document).ready(function() {
                          $("#info_icon").html("").append("<img src=\"" + data.championInfo.mImagePath + "\"></img><br/>");
                          $("#info_name").html("").append("<b>Champion Name:</b> " + data.championInfo.mName + "<br/>");
                          $("#info_hp").html("").append("<b>Health:</b> " + data.championInfo.mHealth + "<br/>");
-                         $("#info_hp_lv").html("").append("<b>Health Per Level:</b> " + data.championInfo.mHealthPerLevel + "<br/>");
+                         $("#info_hp+").html("").append("<b>Health Per Level:</b> " + data.championInfo.mHealthPerLevel + "<br/>");
                          $("#info_hp5").html("").append("<b>Health Regen:</b> " + data.championInfo.mHealthRegen + "<br/>");
-                         $("#info_hp5_lv").html("").append("<b>Health Regen Per Level:</b> " + data.championInfo.mHealthRegenPerLevel + "<br/>");
+                         $("#info_hp5+").html("").append("<b>Health Regen Per Level:</b> " + data.championInfo.mHealthRegenPerLevel + "<br/>");
                          $("#info_mana").html("").append("<b>Mana:</b> " + data.championInfo.mMana + "<br/>");
-                         $("#info_mana_lv").html("").append("<b>Mana Per Level:</b> " + data.championInfo.mManaPerLevel + "<br/>");
+                         $("#info_mana+").html("").append("<b>Mana Per Level:</b> " + data.championInfo.mManaPerLevel + "<br/>");
                          $("#info_mana5").html("").append("<b>Mana Regen:</b> " + data.championInfo.mManaRegen + "<br/>");
-                         $("#info_mana5_lv").html("").append("<b>Mana Regen Per Level:</b> " + data.championInfo.mManaRegenPerLevel + "<br/>");
+                         $("#info_mana5+").html("").append("<b>Mana Regen Per Level:</b> " + data.championInfo.mManaRegenPerLevel + "<br/>");
                          $("#info_damage").html("").append("<b>Damage:</b> " + data.championInfo.mDamage + "<br/>");
-                         $("#info_damage_lv").html("").append("<b>Damage Per Level:</b> " + data.championInfo.mDamagePerLevel + "<br/>");
+                         $("#info_damage+").html("").append("<b>Damage Per Level:</b> " + data.championInfo.mDamagePerLevel + "<br/>");
                          $("#info_attackspeed").html("").append("<b>Attack Speed:</b> " + data.championInfo.mAttackSpeed + "<br/>");
-                         $("#info_attackspeed_lv").html("").append("<b>Attack Speed Per Level:</b> " + data.championInfo.mAttackSpeedPerLevel + "<br/>");
+                         $("#info_attackspeed+").html("").append("<b>Attack Speed Per Level:</b> " + data.championInfo.mAttackSpeedPerLevel + "<br/>");
                          $("#info_armor").html("").append("<b>Armor:</b> " + data.championInfo.mArmor + "<br/>");
-                         $("#info_armor_lv").html("").append("<b>Armor Per Level:</b> " + data.championInfo.mArmorPerLevel + "<br/>");
+                         $("#info_armor+").html("").append("<b>Armor Per Level:</b> " + data.championInfo.mArmorPerLevel + "<br/>");
                          $("#info_mr").html("").append("<b>Magic Resist:</b> " + data.championInfo.mMagicResist + "<br/>");
-                         $("#info_mr_lv").html("").append("<b>Magic Resist Per Level:</b> " + data.championInfo.mMagicResistPerLevel + "<br/>");
+                         $("#info_mr+").html("").append("<b>Magic Resist Per Level:</b> " + data.championInfo.mMagicResistPerLevel + "<br/>");
                          $("#info_movespeed").html("").append("<b>Movement Speed:</b> " + data.championInfo.mMoveSpeed + "<br/>");
                          $("#info_range").html("").append("<b>Attack Range:</b> " + data.championInfo.mAttackRange+ "<br/>");
                      } 

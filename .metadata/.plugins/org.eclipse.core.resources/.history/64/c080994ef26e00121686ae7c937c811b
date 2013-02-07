@@ -69,8 +69,8 @@ public class ChampionNames extends HttpServlet {
         try {      
         	conn = DriverManager
 					.getConnection("jdbc:google:rdbms://league-of-legends-db:league-of-legends-db/LOL");
-        	sql = "SELECT Name FROM CHAMPIONS"; //Uncomment this and comment line below during debugging (stored proc will not work on debug server)
-            //sql = "CALL champion_names()";
+ 
+            sql = "CALL champion_names()";
         	stmt = conn.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery(); 
  

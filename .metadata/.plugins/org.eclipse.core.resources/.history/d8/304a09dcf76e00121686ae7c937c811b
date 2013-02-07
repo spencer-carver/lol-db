@@ -20,18 +20,18 @@
 		<legend>Build Details</legend>
 		<table>
 			<tr>
-				<td width="30%"><div id="build_icon"><img src="http://images1.wikia.nocookie.net/__cb20120730015739/leagueoflegends/images/thumb/9/95/ChampionSquare.png/120px-ChampionSquare.png" /></div></td>
+				<td width="30%"><div id="champion_icon"></div></td>
 				<td width="70%">
 					<table>
 						<tr>
-							<td><div id="build_item_1">item 1</div></td>
-							<td><div id="build_item_2">item 2</div></td>
-							<td><div id="build_item_3">item 3</div></td>
+							<td></td>
+							<td></td>
+							<td></td>
 						</tr>
 						<tr>
-							<td><div id="build_item_4">item 4</div></td>
-							<td><div id="build_item_5">item 5</div></td>
-							<td><div id="build_item_6">item 6</div></td>
+							<td></td>
+							<td></td>
+							<td></td>
 						</tr>
 					</table>
 				</td>

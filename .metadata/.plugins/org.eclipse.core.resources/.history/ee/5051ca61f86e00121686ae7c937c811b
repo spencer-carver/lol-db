@@ -20,7 +20,7 @@
 		<legend>Build Details</legend>
 		<table>
 			<tr>
-				<td width="30%"><div id="build_icon"><img src="http://images1.wikia.nocookie.net/__cb20120730015739/leagueoflegends/images/thumb/9/95/ChampionSquare.png/120px-ChampionSquare.png" /></div></td>
+				<td width="30%"><div id="build_icon"></div></td>
 				<td width="70%">
 					<table>
 						<tr>

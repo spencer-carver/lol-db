@@ -59,9 +59,8 @@ $(document).ready(function() {
     
     //checks for the button click event
     $("#addToBuild").click(function(e) {
-    	var loaded_img = document.getElementById('info_icon');
-    	var build_img = document.getElementById('build_icon');
-    	build_img.innerHTML = loaded_img.innerHTML;
+    	$("#champion_icon").html("");
+    	$("#champion_icon").append("image load");
     });
     
     //checks for the button click event
