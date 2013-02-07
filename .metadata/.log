@@ -8407,3 +8407,90 @@ Binding(SHIFT+DEL,
 
 !ENTRY com.google.appengine.eclipse.core 1 0 2013-02-07 11:55:58.579
 !MESSAGE LOLdb successfully deployed to Google App Engine
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2013-02-07 12:21:45.802
+!MESSAGE No valid Android XML Editor Delegate found for file /LOLdb/war/WEB-INF/web.xml [Res null, type null]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2013-02-07 12:22:27.360
+!MESSAGE No projects found for [C:\Users\Spencer\Documents\Courses\Senior Year\Winter Term\CSSE 333\Project\lol-db\LOLdb\war\WEB-INF\web.xml]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2013-02-07 12:22:28.388
+!MESSAGE No projects found for [C:\Users\Spencer\Documents\Courses\Senior Year\Winter Term\CSSE 333\Project\lol-db\LOLdb\war\WEB-INF\web.xml]
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 12:22:58.397
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-07 12:23:52.688
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 12:27:40.603
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-07 12:27:53.978
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 12:32:09.816
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-07 12:32:26.007
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 12:33:48.112
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 12:36:08.308
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 12:38:27.294
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 12:42:22.270
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-07 12:42:40.113
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 12:52:21.166
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 12:55:05.233
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-07 12:55:21.519
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 12:56:00.342
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 12:57:52.667
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-07 12:58:08.506
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 12:59:36.798
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 13:00:41.528
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 13:01:36.642
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-07 13:01:50.355
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 13:02:56.402
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 13:04:09.463
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 13:04:59.248
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 13:07:01.842
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-07 13:11:40.493
+!MESSAGE Could not change permissions on the launch config file

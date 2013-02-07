@@ -24,6 +24,10 @@ public class Champion {
 	private double mMagicResistPerLevel;
 	private int mMoveSpeed;
 	private int mAttackRange;
+	
+	public char getGuid() {
+		return (char) (mID + 32);
+	}
 
 	public int getmID() {
 		return mID;

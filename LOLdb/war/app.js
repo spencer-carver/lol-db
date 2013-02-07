@@ -195,4 +195,66 @@ $(document).ready(function() {
       
             });        
     });
+    
+  //checks for the button click event
+    $("#addChampToBuild").click(function(e) {
+    	//var loaded_val = document.getElementById('info_icon');
+    	//var build_val = document.getElementById('build_icon');
+    	//build_val.innerHTML = loaded_val.innerHTML;
+    	$("#build_icon").html("").append("<img src=\"" + champion_data.mImagePath + "\"></img>");
+    	//$('#build_name').html("").append(""+champion_data.mName);
+    });
+    
+    //checks for the button click event
+    $("#saveBuild").click(function(e){
+           
+            //get the form data and then serialize that
+            dataString = $("#save_build").serialize();
+            
+            //get the form data using another method 
+            dataString = "championName=" + champion_data.mName;
+            
+            //make the AJAX request, dataType is set to json
+            //meaning we are expecting JSON data in response from the server
+            $.ajax({
+                type: "POST",
+                url: "SaveBuildInfo",
+                data: dataString,
+                dataType: "json",
+                
+                //if received a response from the server
+                success: function( data, textStatus, jqXHR) {
+                    //our country code was correct so we have some information to display
+                     if(data.success){
+                         $("#buildId").val(""+data.guid);
+                     } 
+                     //display error message
+                     else {
+                    	 $("#buildId").val("An error has occurred");
+                     }
+                },
+                
+                //If there was no resonse from the server
+                error: function(jqXHR, textStatus, errorThrown){
+                     console.log("Something really bad happened " + textStatus);
+                     $("#buildId").val(jqXHR.responseText);
+                },
+                
+                //capture the request before it was sent to server
+                beforeSend: function(jqXHR, settings){
+                    //adding some Dummy data to the request
+                    settings.data += "&dummyData=whatever";
+                    //disable the button until we get the response
+                    $('#saveBuild').attr("disabled", true);
+                },
+                
+                //this is called after the response or error functions are finsihed
+                //so that we can take some action
+                complete: function(jqXHR, textStatus){
+                    //enable the button 
+                    $('#saveBuild').attr("disabled", false);
+                }
+      
+            });        
+    });
 });
