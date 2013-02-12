@@ -20,6 +20,7 @@
 
 .champion_image {
 	width: 120px;
+	height: 120px;
 }
 
 .set_item_button {
@@ -28,12 +29,13 @@
 
 .item_image {
 	width: 80px;
+	height: 80px;
 }
 
 img.item {
 	display: block;
 	margin-left: auto;
-	margin-right: auto
+	margin-right: auto;
 }
 
 .build_fieldset {
@@ -60,7 +62,7 @@ img.item {
 <body>
 	<fieldset class="build_fieldset">
 		<legend>Build Details</legend>
-		<table border="2" cellspacing="10" class="hundred_percent">
+		<table>
 			<tr>
 				<td><div id="build_icon" class="champion_image">
 						<img
@@ -74,33 +76,48 @@ img.item {
 						<tr>
 							<td><div id="build_item_1" class="item_image">
 									<img class="item"
-										src="http://images2.wikia.nocookie.net/__cb20091014182736/leagueoflegends/images/8/83/Infinity_Edge.gif" />
-									<input id="addI1ToBuild" type="button" value="Set Item 1"
-										class="set_item_button" />
-								</div></td>
-							<td><div id="build_item_2">item 2</div> <input
-								id="addI2ToBuild" type="button" value="Set Item 2"
+										src="http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg" />
+								</div> <input id="addI1ToBuild" type="button" value="Set Item 1"
 								class="set_item_button" /></td>
-							<td><div id="build_item_3">item 3</div> <input
-								id="addI3ToBuild" type="button" value="Set Item 3"
+							<td><div id="build_item_2" class="item_image">
+									<img
+										src="http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg" />
+								</div> <input id="addI2ToBuild" type="button" value="Set Item 2"
 								class="set_item_button" /></td>
-							<td><div id="build_item_4">item 4</div> <input
-								id="addI4ToBuild" type="button" value="Set Item 4"
+							<td><div id="build_item_3" class="item_image">
+									<img
+										src="http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg" />
+								</div> <input id="addI3ToBuild" type="button" value="Set Item 3"
 								class="set_item_button" /></td>
-							<td><div id="build_item_5">item 5</div> <input
-								id="addI5ToBuild" type="button" value="Set Item 5"
+							<td><div id="build_item_4" class="item_image">
+									<img
+										src="http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg" />
+								</div> <input id="addI4ToBuild" type="button" value="Set Item 4"
 								class="set_item_button" /></td>
-							<td><div id="build_item_6">item 6</div> <input
-								id="addI6ToBuild" type="button" value="Set Item 6"
+							<td><div id="build_item_5" class="item_image">
+									<img
+										src="http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg" />
+								</div> <input id="addI5ToBuild" type="button" value="Set Item 5"
+								class="set_item_button" /></td>
+							<td><div id="build_item_6" class="item_image">
+									<img
+										src="http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg" />
+								</div> <input id="addI6ToBuild" type="button" value="Set Item 6"
 								class="set_item_button" /></td>
 						</tr>
 					</table>
 				</td>
 			</tr>
 		</table>
-		<input id="saveBuild" type="button" value="Save Current Build" /> <input
-			id="buildId" type="text" value="Build ID" /> <input id="saveBuild"
-			type="button" value="Get Build from ID" />
+		<input id="saveBuild" type="button" value="Save Current Build" />
+		<input id="buildId" type="text" value="Build ID" />
+		<input id="saveBuild" type="button" value="Get Build from ID" />
+		<div id="build_health"></div><div id="build_health_regen"></div>
+		<div id="build_mana"></div><div id="build_mana_regen"></div>
+		<div id="build_damage"></div><div id="build_ability_power"></div>
+		<div id="build_armor"></div><div id="build_magic_resist"></div>
+		<div id="build_attack_speed"></div><div id="build_movement_speed"></div>
+		<div id="build_cost"></div>
 	</fieldset>
 	<form id="get_champion_dropdown"></form>
 	<div class="fifty_percent">
@@ -161,10 +178,8 @@ img.item {
 		</form>
 		<div id="itemResults">
 			<fieldset>
-				<legend>Champion Information</legend>
-				<div id="item_info_pane">
-					
-				</div>
+				<legend>Item Information</legend>
+				<div id="item_info_pane"></div>
 			</fieldset>
 		</div>
 	</div>

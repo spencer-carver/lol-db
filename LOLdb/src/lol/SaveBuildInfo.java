@@ -32,7 +32,7 @@ public class SaveBuildInfo extends HttpServlet {
 
 		// Champion champion = (Champion)
 		// request.getSession().getAttribute("champion");
-		String champion_name = (String) request.getParameter("championName");
+		String champion_json = request.getParameter("champion");
 		// String item_1 = request.getParameter("item_1");
 
 		PrintWriter out = response.getWriter();
@@ -49,7 +49,7 @@ public class SaveBuildInfo extends HttpServlet {
 		Gson gson = new Gson();
 		JsonObject myObj = new JsonObject();
 
-		Champion champion = getChampion(champion_name);
+		Champion champion = gson.fromJson(champion_json, Champion.class);
 		String guid = getInfo(champion);
 		JsonElement guidObj = gson.toJsonTree(guid);
 		if (guid == null) {
@@ -66,6 +66,7 @@ public class SaveBuildInfo extends HttpServlet {
 
 	private Champion getChampion(String championName) {
 
+		
 		Champion champion = new Champion();
 		Connection conn = null;
 		PreparedStatement stmt = null;

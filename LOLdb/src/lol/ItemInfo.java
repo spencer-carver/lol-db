@@ -60,7 +60,7 @@ public class ItemInfo extends HttpServlet {
     }
  
     //Get Country Information
-    private Item getInfo(String championName) {
+    private Item getInfo(String itemName) {
  
         Item item = new Item();
         Connection conn = null;            
@@ -72,15 +72,23 @@ public class ItemInfo extends HttpServlet {
 					.getConnection("jdbc:google:rdbms://league-of-legends-db:league-of-legends-db/LOL");
  
             //sql = "CALL champion_lookup( ? )"; 
-        	sql = "SELECT * FROM ITEMS WHERE ItemID = 81";
+        	sql = "SELECT * FROM ITEMS WHERE Name=?";
             stmt = conn.prepareStatement(sql);
-            //stmt.setString(1, championName.trim());
+            stmt.setString(1, itemName.trim());
             ResultSet rs = stmt.executeQuery(); 
  
             while(rs.next()){ 
             	//item.setmID(rs.getInt("ItemID"));
                 item.setmName(rs.getString("Name"));
                 item.setCost(rs.getInt("Cost"));
+                item.setImagePath(rs.getString("ImagePath"));
+                item.parseModifier(rs.getInt("ModifierID1"), rs.getFloat("Value1"));
+                item.parseModifier(rs.getInt("ModifierID2"), rs.getFloat("Value2"));
+                item.parseModifier(rs.getInt("ModifierID3"), rs.getFloat("Value3"));
+                item.parseModifier(rs.getInt("ModifierID4"), rs.getFloat("Value4"));
+                item.parseModifier(rs.getInt("ModifierID5"), rs.getFloat("Value5"));
+                item.parseModifier(rs.getInt("ModifierID6"), rs.getFloat("Value6"));
+                item.parseModifier(rs.getInt("ModifierID7"), rs.getFloat("Value7"));
                 //TODO Fill out once stored procedure is written
             }                                                                         
  

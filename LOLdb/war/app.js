@@ -1,21 +1,154 @@
+var champion_data;
+var build_champ;
+var item_data;
+var item_1;
+var item_2;
+var item_3;
+var item_4;
+var item_5;
+var item_6;
+
+function update() {
+    var health = 0;
+    if (build_champ != null) {
+    	health += build_champ.mHealth + build_champ.mHealthPerLevel*18;
+    }
+    if (item_1 != null) {
+    	if (item_1.health != null) {
+        	health += item_1.health;
+    	}
+    	if (item_1.healthPerLevel != null) {
+    		health += item_1.healthPerLevel*18;
+    	}
+    }
+    if (item_2 != null) {
+    	if (item_2.health != null) {
+    		health += item_2.health;
+    	}
+    	if (item_2.healthPerLevel != null) {
+    		health += item_2.healthPerLevel*18;
+    	}
+    }
+    if (item_3 != null) {
+    	if (item_3.health != null) {
+    		health += item_3.health;
+    	}
+    	if (item_3.healthPerLevel != null) {
+    		health += item_3.healthPerLevel*18;
+    	}
+    }
+    if (item_4 != null) {
+    	if (item_4.health != null) {
+    		health += item_4.health;
+    	}
+    	if (item_4.healthPerLevel != null) {
+    		health += item_4.healthPerLevel*18;
+    	}
+    }
+    if (item_5 != null) {
+    	if (item_5.health != null) {
+    		health += item_5.health;
+    	}
+    	if (item_5.healthPerLevel != null) {
+    		health += item_5.healthPerLevel*18;
+    	}
+    }
+    if (item_6 != null) {
+    	if (item_6.health != null) {
+    		health += item_6.health;
+    	}
+    	if (item_6.healthPerLevel != null) {
+    		health += item_6.healthPerLevel*18;
+    	}
+    }
+    $("#build_health").html("").append("Health: "+ health);
+    var health_regen = 0;
+    if (build_champ != null) {
+    	health_regen += build_champ.mHealthRegen + build_champ.mHealthRegenPerLevel*18;
+    }
+    if (item_1 != null && item_1.healthRegen != null) {
+    	health_regen += item_1.healthRegen;
+    }
+    if (item_2 != null && item_2.healthRegen != null) {
+    	health_regen += item_2.healthRegen;
+    }
+    if (item_3 != null && item_3.healthRegen != null) {
+    	health_regen += item_3.healthRegen;
+    }
+    if (item_4 != null && item_4.healthRegen != null) {
+    	health_regen += item_4.healthRegen;
+    }
+    if (item_5 != null && item_5.healthRegen != null) {
+    	health_regen += item_5.healthRegen;
+    }
+    if (item_6 != null && item_6.healthRegen != null) {
+    	health_regen += item_6.healthRegen;
+    }
+    $("#build_health_regen").html("").append("Health Regen: "+ health_regen + " per 5 sec");
+    var mana = 0;
+    if (build_champ != null) {
+    	mana += build_champ.mMana + build_champ.mManaPerLevel*18;
+    }
+    // check resource here eventually
+    if (item_1 != null && item_1.mana != null) {
+    	mana += item_1.mana;
+    }
+    if (item_2 != null && item_2.mana != null) {
+    	mana += item_2.mana;
+    }
+    if (item_3 != null && item_3.mana != null) {
+    	mana += item_3.mana;
+    }
+    if (item_4 != null && item_4.mana != null) {
+    	mana += item_4.mana;
+    }
+    if (item_5 != null && item_5.mana != null) {
+    	mana += item_5.mana;
+    }
+    if (item_6 != null && item_6.mana != null) {
+    	mana += item_6.mana;
+    }
+    $("#build_mana").html("").append("Mana: "+ mana);
+    var cost = 0;
+    // check resource here eventually
+    if (item_1 != null && item_1.cost != null) {
+    	cost += item_1.cost;
+    }
+    if (item_2 != null && item_2.cost != null) {
+    	cost += item_2.cost;
+    }
+    if (item_3 != null && item_3.cost != null) {
+    	cost += item_3.cost;
+    }
+    if (item_4 != null && item_4.cost != null) {
+    	cost += item_4.cost;
+    }
+    if (item_5 != null && item_5.cost != null) {
+    	cost += item_5.cost;
+    }
+    if (item_6 != null && item_6.cost != null) {
+    	cost += item_6.cost;
+    }
+    $("#build_cost").html("").append("Build Cost: "+ cost + " Gold");
+}
+
 $(document).ready(function() {
 	
-	var champion_data;
-	
-	//get the form data and then serialize that
+	// get the form data and then serialize that
     dataString = $("#get_champion_dropdown").serialize();
     
-    //make the AJAX request, dataType is set to json
-    //meaning we are expecting JSON data in response from the server
+    // make the AJAX request, dataType is set to json
+    // meaning we are expecting JSON data in response from the server
     $.ajax({
         type: "POST",
         url: "ChampionNames",
         data: "",
         dataType: "json",
         
-        //if received a response from the server
+        // if received a response from the server
         success: function( data, textStatus, jqXHR) {
-            //our country code was correct so we have some information to display
+            // our country code was correct so we have some information to
+			// display
              if(data.success){
                  $("#championDropdown").html("");
                  var temp = "<select id=\"champion_select\">";
@@ -25,70 +158,71 @@ $(document).ready(function() {
                  temp += "</select>";
                  $("#championDropdown").append(temp);
              } 
-             //display error message
+             // display error message
              else {
                  $("#championDropdown").html("<div><b>An Error has occurred retrieving the list of Champions.</b></div>");
              }
         },
         
-        //If there was no resonse from the server
+        // If there was no resonse from the server
         error: function(jqXHR, textStatus, errorThrown){
              console.log("Something really bad happened " + textStatus);
               $("#championDropdown").html(jqXHR.responseText);
         },
         
-        //capture the request before it was sent to server
+        // capture the request before it was sent to server
         beforeSend: function(jqXHR, settings){
-            //adding some Dummy data to the request
+            // adding some Dummy data to the request
             settings.data += "&dummyData=whatever";
-            //disable the button until we get the response
+            // disable the button until we get the response
             $('#myButton').attr("disabled", true);
         },
         
-        //this is called after the response or error functions are finsihed
-        //so that we can take some action
+        // this is called after the response or error functions are finsihed
+        // so that we can take some action
         complete: function(jqXHR, textStatus){
-            //enable the button 
+            // enable the button
             $('#myButton').attr("disabled", false);
         }
 
     });
  
-    //Stops the submit request
+    // Stops the submit request
     $("#get_champion_info").submit(function(e){
            e.preventDefault();
     });
     
-    //checks for the button click event
+    // checks for the button click event
     $("#addChampToBuild").click(function(e) {
-    	//var loaded_val = document.getElementById('info_icon');
-    	//var build_val = document.getElementById('build_icon');
-    	//build_val.innerHTML = loaded_val.innerHTML;
+    	// var loaded_val = document.getElementById('info_icon');
+    	// var build_val = document.getElementById('build_icon');
+    	// build_val.innerHTML = loaded_val.innerHTML;
     	$("#build_icon").html("").append("<img src=\"" + champion_data.mImagePath + "\"></img>");
-    	//$('#build_name').html("").append(""+champion_data.mName);
+    	// $('#build_name').html("").append(""+champion_data.mName);
     });
     
-    //checks for the button click event
+    // checks for the button click event
     $("#getChampion").click(function(e){
            
-            //get the form data and then serialize that
+            // get the form data and then serialize that
             dataString = $("#get_champion_info").serialize();
             
-            //get the form data using another method 
+            // get the form data using another method
             var championName = $("#champion_select option:selected").text(); 
             dataString = "championName=" + championName;
             
-            //make the AJAX request, dataType is set to json
-            //meaning we are expecting JSON data in response from the server
+            // make the AJAX request, dataType is set to json
+            // meaning we are expecting JSON data in response from the server
             $.ajax({
                 type: "POST",
                 url: "ChampionInfo",
                 data: dataString,
                 dataType: "json",
                 
-                //if received a response from the server
+                // if received a response from the server
                 success: function( data, textStatus, jqXHR) {
-                    //our country code was correct so we have some information to display
+                    // our country code was correct so we have some information
+					// to display
                      if(data.success){
                     	 champion_data = data.championInfo;
                          $("#info_icon").html("").append("<img src=\"" + data.championInfo.mImagePath + "\"></img><br/>");
@@ -112,146 +246,226 @@ $(document).ready(function() {
                          $("#info_movespeed").html("").append("<b>Movement Speed:</b> " + data.championInfo.mMoveSpeed + "<br/>");
                          $("#info_range").html("").append("<b>Attack Range:</b> " + data.championInfo.mAttackRange+ "<br/>");
                      } 
-                     //display error message
+                     // display error message
                      else {
                     	 $("#champion_info_pane").html("<div><b>Champion Information could not be found.</b></div>");
                      }
                 },
                 
-                //If there was no resonse from the server
+                // If there was no resonse from the server
                 error: function(jqXHR, textStatus, errorThrown){
                      console.log("Something really bad happened " + textStatus);
                      $("#champion_info_pane").html(jqXHR.responseText);
                 },
                 
-                //capture the request before it was sent to server
+                // capture the request before it was sent to server
                 beforeSend: function(jqXHR, settings){
-                    //adding some Dummy data to the request
+                    // adding some Dummy data to the request
                     settings.data += "&dummyData=whatever";
-                    //disable the button until we get the response
+                    // disable the button until we get the response
                     $('#getChampion').attr("disabled", true);
                 },
                 
-                //this is called after the response or error functions are finsihed
-                //so that we can take some action
+                // this is called after the response or error functions are
+				// finsihed
+                // so that we can take some action
                 complete: function(jqXHR, textStatus){
-                    //enable the button 
+                    // enable the button
                     $('#getChampion').attr("disabled", false);
                 }
       
             });        
     });
     
-  //checks for the button click event
+    // checks for the button click event
     $("#getItem").click(function(e){
            
-            //get the form data and then serialize that
+            // get the form data and then serialize that
             dataString = $("#get_item_info").serialize();
             
-            //get the form data using another method 
-            var itemnName = $("#getItem").text(); 
+            // get the form data using another method
+            var itemName = $("#itemName").val(); 
             dataString = "itemName=" + itemName;
             
-            //make the AJAX request, dataType is set to json
-            //meaning we are expecting JSON data in response from the server
+            // make the AJAX request, dataType is set to json
+            // meaning we are expecting JSON data in response from the server
             $.ajax({
                 type: "POST",
                 url: "ItemInfo",
                 data: dataString,
                 dataType: "json",
                 
-                //if received a response from the server
+                // if received a response from the server
                 success: function( data, textStatus, jqXHR) {
-                    //our country code was correct so we have some information to display
+                    // our country code was correct so we have some information
+					// to display
                      if(data.success){
-                         $('#item_info_pane').html(""+data.itemInfo.name);
+                    	 item_data = data.itemInfo;
+                         $('#item_info_pane').html("");
+                         $('#item_info_pane').append("<img src=\"" + data.itemInfo.imagePath + "\"></img><br/>");
                      } 
-                     //display error message
+                     // display error message
                      else {
                     	 $("#item_info_pane").html("<b>Item Information could not be found.</b>");
                      }
                 },
                 
-                //If there was no resonse from the server
+                // If there was no resonse from the server
                 error: function(jqXHR, textStatus, errorThrown){
                      console.log("Something really bad happened " + textStatus);
                      $("#item_info_pane").html(jqXHR.responseText);
                 },
                 
-                //capture the request before it was sent to server
+                // capture the request before it was sent to server
                 beforeSend: function(jqXHR, settings){
-                    //adding some Dummy data to the request
+                    // adding some Dummy data to the request
                     settings.data += "&dummyData=whatever";
-                    //disable the button until we get the response
+                    // disable the button until we get the response
                     $('#getItem').attr("disabled", true);
                 },
                 
-                //this is called after the response or error functions are finsihed
-                //so that we can take some action
+                // this is called after the response or error functions are
+				// finsihed
+                // so that we can take some action
                 complete: function(jqXHR, textStatus){
-                    //enable the button 
+                    // enable the button
                     $('#getItem').attr("disabled", false);
                 }
       
             });        
     });
-    
-  //checks for the button click event
+
+    // checks for the button click event
     $("#addChampToBuild").click(function(e) {
-    	//var loaded_val = document.getElementById('info_icon');
-    	//var build_val = document.getElementById('build_icon');
-    	//build_val.innerHTML = loaded_val.innerHTML;
-    	$("#build_icon").html("").append("<img src=\"" + champion_data.mImagePath + "\"></img>");
-    	//$('#build_name').html("").append(""+champion_data.mName);
+    	// var loaded_val = document.getElementById('info_icon');
+    	// var build_val = document.getElementById('build_icon');
+    	// build_val.innerHTML = loaded_val.innerHTML;
+    	build_champ = champion_data;
+    	update();
+    	$("#build_icon").html("").append("<img src=\"" + build_champ.mImagePath + "\"></img>");
+    	// $('#build_name').html("").append(""+champion_data.mName);
     });
     
-    //checks for the button click event
+    // checks for the button click event
+    $("#addI1ToBuild").click(function(e) {
+      	item_1 = item_data;
+      	update();
+      	if (item_1.imagePath == null) {
+      		$("#build_item_1").html("").append(""+item_1.name);
+      	} else {
+          	$("#build_item_1").html("").append("<img id=\"item_1_img\" src=\"" +item_1.imagePath + "\"></img>");
+          	$("#item_1_img").width(80);
+      	}
+    });
+    
+    // checks for the button click event
+    $("#addI2ToBuild").click(function(e) {
+    	item_2 = item_data;
+    	update();
+      	if (item_2.imagePath == null) {
+      		$("#build_item_2").html("").append(""+item_2.name);
+      	} else {
+          	$("#build_item_2").html("").append("<img id=\"item_2_img\" src=\"" +item_2.imagePath + "\"></img>");
+          	$("#item_2_img").width(80);
+      	}
+    });
+    
+    // checks for the button click event
+    $("#addI3ToBuild").click(function(e) {
+      	item_3 = item_data;
+      	update();
+      	if (item_3.imagePath == null) {
+      		$("#build_item_3").html("").append(""+item_3.name);
+      	} else {
+      		$("#build_item_3").html("").append("<img id=\"item_3_img\" src=\"" +item_3.imagePath + "\"></img>");
+      		$("#item_3_img").width(80);
+      	}
+    });
+    
+    // checks for the button click event
+    $("#addI4ToBuild").click(function(e) {
+    	item_4 = item_data;
+    	update();
+      	if (item_4.imagePath == null) {
+      		$("#build_item_4").html("").append(""+item_4.name);
+      	} else {
+      		$("#build_item_4").html("").append("<img id=\"item_4_img\" src=\"" +item_4.imagePath + "\"></img>");
+      		$("#item_4_img").width(80);
+      	}
+    });
+    
+    // checks for the button click event
+    $("#addI5ToBuild").click(function(e) {
+    	item_5 = item_data;
+    	update();
+      	if (item_5.imagePath == null) {
+      		$("#build_item_5").html("").append(""+item_5.name);
+      	} else {
+      		$("#build_item_5").html("").append("<img id=\"item_5_img\" src=\"" +item_5.imagePath + "\"></img>");
+      		$("#item_5_img").width(80);
+      	}
+    });
+    
+    // checks for the button click event
+    $("#addI6ToBuild").click(function(e) {
+    	item_6 = item_data;
+    	update();
+      	if (item_6.imagePath == null) {
+      		$("#build_item_6").html("").append(""+item_6.name);
+      	} else {
+      		$("#build_item_6").html("").append("<img id=\"item_6_img\" src=\"" +item_6.imagePath + "\"></img>");
+      		$("#item_6_img").width(80);
+      	}
+    });
+    
+    // checks for the button click event
     $("#saveBuild").click(function(e){
            
-            //get the form data and then serialize that
+            // get the form data and then serialize that
             dataString = $("#save_build").serialize();
             
-            //get the form data using another method 
+            // get the form data using another method
             dataString = "championName=" + champion_data.mName;
-            
-            //make the AJAX request, dataType is set to json
-            //meaning we are expecting JSON data in response from the server
+            // make the AJAX request, dataType is set to json
+            // meaning we are expecting JSON data in response from the server
             $.ajax({
                 type: "POST",
                 url: "SaveBuildInfo",
-                data: dataString,
+                data: "champion=" + JSON.stringify(champion_data),
                 dataType: "json",
                 
-                //if received a response from the server
+                // if received a response from the server
                 success: function( data, textStatus, jqXHR) {
-                    //our country code was correct so we have some information to display
+                    // our country code was correct so we have some information
+					// to display
                      if(data.success){
                          $("#buildId").val(""+data.guid);
                      } 
-                     //display error message
+                     // display error message
                      else {
                     	 $("#buildId").val("An error has occurred");
                      }
                 },
                 
-                //If there was no resonse from the server
+                // If there was no resonse from the server
                 error: function(jqXHR, textStatus, errorThrown){
                      console.log("Something really bad happened " + textStatus);
                      $("#buildId").val(jqXHR.responseText);
                 },
                 
-                //capture the request before it was sent to server
+                // capture the request before it was sent to server
                 beforeSend: function(jqXHR, settings){
-                    //adding some Dummy data to the request
+                    // adding some Dummy data to the request
                     settings.data += "&dummyData=whatever";
-                    //disable the button until we get the response
+                    // disable the button until we get the response
                     $('#saveBuild').attr("disabled", true);
                 },
                 
-                //this is called after the response or error functions are finsihed
-                //so that we can take some action
+                // this is called after the response or error functions are
+				// finsihed
+                // so that we can take some action
                 complete: function(jqXHR, textStatus){
-                    //enable the button 
+                    // enable the button
                     $('#saveBuild').attr("disabled", false);
                 }
       

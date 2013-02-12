@@ -1,5 +1,1 @@
 INDEX VERSION 1.122+C:\Users\Spencer\Documents\Courses\Senior Year\Winter Term\CSSE 333\Project\lol-db\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1479478446.index
-3516903436.index
-3687444369.index
-1153313540.index

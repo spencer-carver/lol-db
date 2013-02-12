@@ -193,6 +193,26 @@ public abstract class Modifier {
 	public void setMoveSpeedMultiplier(double ms) {
 		moveSpeedMultiplier = ms;
 	}
+	
+	private double abilityPower;
+	
+	public double getAbilityPower() {
+		return abilityPower;
+	}
+	
+	public void setAbilityPower(double ap) {
+		abilityPower = ap;
+	}
+	
+	private double abilityPowerPerLevel;
+	
+	public double getAbililtyPowerPerLevel() {
+		return abilityPowerPerLevel;
+	}
+	
+	public void setAbilityPowerPerLevel(double sap) {
+		abilityPowerPerLevel = sap;
+	}
 
 	public Modifier() {
 		mID = 0;
@@ -216,6 +236,8 @@ public abstract class Modifier {
 		magicResistPerLevel = 0;
 		moveSpeed = 0;
 		moveSpeedMultiplier = 1;
+		abilityPower = 0;
+		abilityPowerPerLevel = 0;
 	}
 
 	public String getmName() {

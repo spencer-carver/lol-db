@@ -1,0 +1,190 @@
+<html>
+<head>
+<title>League of Legends Theorycraft Tool</title>
+
+<link
+	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+	rel="stylesheet" type="text/css" />
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"
+	type="text/javascript"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+	type="text/javascript"></script>
+<script type="text/javascript" src="app.js"></script>
+<style type="text/css">
+.set_champion_button {
+	width: 120px;
+}
+
+.champion_image {
+	width: 120px;
+	height: 120px;
+}
+
+.set_item_button {
+	width: 80px;
+}
+
+.item_image {
+	width: 80px;
+	height: 80px;
+}
+
+img.item {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.build_fieldset {
+	font-size: 20pt;
+	color: red;
+	background-color: #BBBBBB;
+	color: red;
+}
+
+.fifty_percent {
+	float: left;
+	width: 50%;
+}
+
+.footer {
+	float: left;
+}
+
+.left {
+	font-size: 20pt;
+}
+</style>
+</head>
+<body>
+	<fieldset class="build_fieldset">
+		<legend>Build Details</legend>
+		<table border="2" cellspacing="10" class="hundred_percent">
+			<tr>
+				<td><div id="build_icon" class="champion_image">
+						<img
+							src="http://images1.wikia.nocookie.net/__cb20120730015739/leagueoflegends/images/thumb/9/95/ChampionSquare.png/120px-ChampionSquare.png" />
+					</div> <input id="addChampToBuild" type="button" value="Set Champion"
+					class="set_champion_button" />
+					<form id="save_build"></form>
+					<form id="load_build"></form></td>
+				<td>
+					<table border="2" cellspacing="12">
+						<tr>
+							<td><div id="build_item_1" class="item_image">
+									<img class="item"
+										src="http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg" />
+								</div> <input id="addI1ToBuild" type="button" value="Set Item 1"
+								class="set_item_button" /></td>
+							<td><div id="build_item_2">
+									<img
+										src="http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg" />
+								</div> <input id="addI2ToBuild" type="button" value="Set Item 2"
+								class="set_item_button" /></td>
+							<td><div id="build_item_3">
+									<img
+										src="http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg" />
+								</div> <input id="addI3ToBuild" type="button" value="Set Item 3"
+								class="set_item_button" /></td>
+							<td><div id="build_item_4">
+									<img
+										src="http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg" />
+								</div> <input id="addI4ToBuild" type="button" value="Set Item 4"
+								class="set_item_button" /></td>
+							<td><div id="build_item_5">
+									<img
+										src="http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg" />
+								</div> <input id="addI5ToBuild" type="button" value="Set Item 5"
+								class="set_item_button" /></td>
+							<td><div id="build_item_6">
+									<img
+										src="http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg" />
+								</div> <input id="addI6ToBuild" type="button" value="Set Item 6"
+								class="set_item_button" /></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<input id="saveBuild" type="button" value="Save Current Build" /> <input
+			id="buildId" type="text" value="Build ID" /> <input id="saveBuild"
+			type="button" value="Get Build from ID" />
+	</fieldset>
+	<form id="get_champion_dropdown"></form>
+	<div class="fifty_percent">
+		<form id="get_champion_info">
+			<fieldset class="champion_fieldset">
+				<legend>Select a Champion</legend>
+
+				<p>
+				<div id="championDropdown"></div>
+				</p>
+				<p>
+					<input id="getChampion" type="button" value="Get Champion Info" />
+				</p>
+			</fieldset>
+		</form>
+		<div id="championResults">
+			<fieldset>
+				<legend>Champion Information</legend>
+				<div id="champion_info_pane">
+					<div id="info_icon"></div>
+					<div id="info_name"></div>
+					<div id="info_hp"></div>
+					<div id="info_hp_lv"></div>
+					<div id="info_hp5"></div>
+					<div id="info_hp5_lv"></div>
+					<div id="info_mana"></div>
+					<div id="info_mana_lv"></div>
+					<div id="info_mana5"></div>
+					<div id="info_mana5_lv"></div>
+					<div id="info_damage"></div>
+					<div id="info_damage_lv"></div>
+					<div id="info_attackspeed"></div>
+					<div id="info_attackspeed_lv"></div>
+					<div id="info_armor"></div>
+					<div id="info_armor_lv"></div>
+					<div id="info_mr"></div>
+					<div id="info_mr_lv"></div>
+					<div id="info_movespeed"></div>
+					<div id="info_range"></div>
+				</div>
+			</fieldset>
+		</div>
+	</div>
+	<div class="fifty_percent">
+		<form id="get_item_info">
+			<fieldset>
+				<legend>Select an Item</legend>
+
+				<p>
+				<div id="itemDropdown">
+					<input id="itemName" type="text" value="" />
+				</div>
+				</p>
+				<p>
+					<input id="getItem" type="button" value="Get Statistics" />
+				</p>
+			</fieldset>
+		</form>
+		<div id="itemResults">
+			<fieldset>
+				<legend>Champion Information</legend>
+				<div id="item_info_pane"></div>
+			</fieldset>
+		</div>
+	</div>
+	<footer class="footer">
+		<p>This web application is a work in progress. Please be aware
+			that information reflected in this application is kept as up-to-date
+			as possible by the developers, but may not be accurate, especially if
+			a new patch has just recently been released.</p>
+		<p>
+			<time pubdate datetime="2013-01-31"></time>
+		</p>
+	</footer>
+</body>
+</html>

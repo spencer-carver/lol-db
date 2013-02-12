@@ -77,14 +77,14 @@ public class ChampionInfo extends HttpServlet {
             ResultSet rs = stmt.executeQuery(); 
  
             while(rs.next()){ 
-            	//champion.setmID(rs.getInt("ID"));
+            	champion.setmID(rs.getInt("ID"));
                 champion.setmName(rs.getString("Name"));
                 champion.setmImagePath(rs.getString("ImagePath"));
                 champion.setmHealth(rs.getInt("Health"));
                 champion.setmHealthPerLevel(rs.getInt("HealthPerLevel"));
                 champion.setmHealthRegen(rs.getDouble("HealthRegen"));
                 champion.setmHealthRegenPerLevel(rs.getDouble("HealthRegenPerLevel"));
-                //champion.setmResourceType(rs.getInt("ResourceID"));
+                champion.setmResourceType(rs.getInt("ResourceID"));
                 champion.setmMana(rs.getInt("Mana"));
                 champion.setmManaPerLevel(rs.getDouble("ManaPerLevel"));
                 champion.setmManaRegen(rs.getDouble("ManaRegen"));

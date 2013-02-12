@@ -23,5 +23,10 @@
     "location": "C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\shared\\servlet-api.jar",
     "status": "UNRESOLVED",
     "error": "No call model found for \u0027C:\\Program Files\\Eclipse\\plugins\\com.google.appengine.eclipse.sdkbundle_1.7.4\\appengine-java-sdk-1.7.4\\lib\\shared\\servlet-api.jar\u0027. Neither fingerprint \u00273e1611f999df55596bf5b9acd5f27c81e58d67eb\u0027 nor symbolic name \u0027servlet-api\u0027 are known."
+  },
+  "C:\\Users\\Spencer\\Documents\\Courses\\Senior Year\\Winter Term\\CSSE 333\\Project\\lol-db\\LOLdb\\war\\WEB-INF\\lib\\gson-2.1.jar": {
+    "coordinate": "com.google.gson:com.google.gson:zip:call:2.0.0",
+    "location": "C:\\Users\\Spencer\\Documents\\Courses\\Senior Year\\Winter Term\\CSSE 333\\Project\\lol-db\\LOLdb\\war\\WEB-INF\\lib\\gson-2.1.jar",
+    "status": "RESOLVED"
   }
 }
