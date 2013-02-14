@@ -26,7 +26,7 @@ public class Champion {
 	private int mAttackRange;
 	
 	public char getGuid() {
-		return (char) (mID + 32);
+		return GUID_transformer.transformToChar(mID);
 	}
 
 	public int getmID() {
