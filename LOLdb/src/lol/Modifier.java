@@ -3,16 +3,15 @@ package lol;
 public abstract class Modifier {
 	private int mID;
 	private String name;
-	private char guid;
+	//private char guid;
 
 	public char getGuid() {
-		guid = (char) mID;
-		return guid;
+		return GUID_transformer.transformToChar(mID);
 	}
 
-	public void setGuid(char c) {
-		guid = c;
-	}
+	//public void setGuid(char c) {
+	//	guid = c;
+	//}
 
 	private double health;
 
