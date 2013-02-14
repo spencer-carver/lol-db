@@ -7,18 +7,19 @@ var item_3;
 var item_4;
 var item_5;
 var item_6;
+var build_level = 18;
 
 function update() {
     var health = 0;
     if (build_champ != null) {
-    	health += build_champ.mHealth + build_champ.mHealthPerLevel*18;
+    	health += build_champ.mHealth + build_champ.mHealthPerLevel*build_level;
     }
     if (item_1 != null) {
     	if (item_1.health != null) {
         	health += item_1.health;
     	}
     	if (item_1.healthPerLevel != null) {
-    		health += item_1.healthPerLevel*18;
+    		health += item_1.healthPerLevel*build_level;
     	}
     }
     if (item_2 != null) {
@@ -26,7 +27,7 @@ function update() {
     		health += item_2.health;
     	}
     	if (item_2.healthPerLevel != null) {
-    		health += item_2.healthPerLevel*18;
+    		health += item_2.healthPerLevel*build_level;
     	}
     }
     if (item_3 != null) {
@@ -34,7 +35,7 @@ function update() {
     		health += item_3.health;
     	}
     	if (item_3.healthPerLevel != null) {
-    		health += item_3.healthPerLevel*18;
+    		health += item_3.healthPerLevel*build_level;
     	}
     }
     if (item_4 != null) {
@@ -42,7 +43,7 @@ function update() {
     		health += item_4.health;
     	}
     	if (item_4.healthPerLevel != null) {
-    		health += item_4.healthPerLevel*18;
+    		health += item_4.healthPerLevel*build_level;
     	}
     }
     if (item_5 != null) {
@@ -50,7 +51,7 @@ function update() {
     		health += item_5.health;
     	}
     	if (item_5.healthPerLevel != null) {
-    		health += item_5.healthPerLevel*18;
+    		health += item_5.healthPerLevel*build_level;
     	}
     }
     if (item_6 != null) {
@@ -58,57 +59,119 @@ function update() {
     		health += item_6.health;
     	}
     	if (item_6.healthPerLevel != null) {
-    		health += item_6.healthPerLevel*18;
+    		health += item_6.healthPerLevel*build_level;
     	}
     }
     $("#build_health").html("").append("Health: "+ health);
     var health_regen = 0;
     if (build_champ != null) {
-    	health_regen += build_champ.mHealthRegen + build_champ.mHealthRegenPerLevel*18;
+    	health_regen += build_champ.mHealthRegen + build_champ.mHealthRegenPerLevel*build_level;
     }
-    if (item_1 != null && item_1.healthRegen != null) {
-    	health_regen += item_1.healthRegen;
+    if (item_1 != null) {
+    	if (item_1.healthRegen != null) {
+        	health_regen += item_1.healthRegen;
+    	}
+    	if (item_1.healthRegenPerLevel != null) {
+    		health_regen += item_1.healthRegenPerLevel*build_level;
+    	}
     }
-    if (item_2 != null && item_2.healthRegen != null) {
-    	health_regen += item_2.healthRegen;
-    }
-    if (item_3 != null && item_3.healthRegen != null) {
-    	health_regen += item_3.healthRegen;
-    }
-    if (item_4 != null && item_4.healthRegen != null) {
-    	health_regen += item_4.healthRegen;
-    }
-    if (item_5 != null && item_5.healthRegen != null) {
-    	health_regen += item_5.healthRegen;
-    }
-    if (item_6 != null && item_6.healthRegen != null) {
-    	health_regen += item_6.healthRegen;
-    }
-    $("#build_health_regen").html("").append("Health Regen: "+ health_regen + " per 5 sec");
+    if (item_2 != null) {
+    	if (item_2.healthRegen != null) {
+        	health_regen += item_2.healthRegen;
+    	}
+    	if (item_2.healthRegenPerLevel != null) {
+    		health_regen += item_2.healthRegenPerLevel*build_level;
+    	}
+    	if (item_3 != null) {
+        	if (item_3.healthRegen != null) {
+            	health_regen += item_3.healthRegen;
+        	}
+        	if (item_3.healthRegenPerLevel != null) {
+        		health_regen += item_3.healthRegenPerLevel*build_level;
+        	}
+        }
+    	if (item_4 != null) {
+        	if (item_4.healthRegen != null) {
+            	health_regen += item_4.healthRegen;
+        	}
+        	if (item_4.healthRegenPerLevel != null) {
+        		health_regen += item_4.healthRegenPerLevel*build_level;
+        	}
+        }
+    	if (item_5 != null) {
+        	if (item_5.healthRegen != null) {
+            	health_regen += item_5.healthRegen;
+        	}
+        	if (item_5.healthRegenPerLevel != null) {
+        		health_regen += item_5.healthRegenPerLevel*build_level;
+        	}
+        }
+    	if (item_6 != null) {
+        	if (item_6.healthRegen != null) {
+            	health_regen += item_6.healthRegen;
+        	}
+        	if (item_6.healthRegenPerLevel != null) {
+        		health_regen += item_6.healthRegenPerLevel*build_level;
+        	}
+        }
+    $("#build_health_regen").html("").append("Health Regen (per 5 seconds): "+ health_regen);
     var mana = 0;
     if (build_champ != null) {
-    	mana += build_champ.mMana + build_champ.mManaPerLevel*18;
+    	mana += build_champ.mMana + build_champ.mManaPerLevel*build_level;
     }
     // check resource here eventually
-    if (item_1 != null && item_1.mana != null) {
-    	mana += item_1.mana;
+    if (true) {
+    	if (item_1 != null) {
+    		if (item_1.mana != null) {
+    			mana += item_1.mana;
+    		}
+    		if (item_1.manaPerLevel != null) {
+    			mana += item_1.manaPerLevel*build_level;
+    		}
+    	}
+    	if (item_2 != null) {
+    		if (item_2.mana != null) {
+    			mana += item_2.mana;
+    		}
+    		if (item_2.manaPerLevel != null) {
+    			mana += item_2.manaPerLevel*build_level;
+    		}
+    	}
+    	if (item_3 != null) {
+    		if (item_3.mana != null) {
+    			mana += item_3.mana;
+    		}
+    		if (item_3.manaPerLevel != null) {
+    			mana += item_3.manaPerLevel*build_level;
+    		}
+    	}
+    	if (item_4 != null) {
+    		if (item_4.mana != null) {
+    			mana += item_4.mana;
+    		}
+    		if (item_4.manaPerLevel != null) {
+    			mana += item_4.manaPerLevel*build_level;
+    		}
+    	}
+    	if (item_5 != null) {
+    		if (item_5.mana != null) {
+    			mana += item_5.mana;
+    		}
+    		if (item_5.manaPerLevel != null) {
+    			mana += item_5.manaPerLevel*build_level;
+    		}
+    	}
+    	if (item_6 != null) {
+    		if (item_6.mana != null) {
+    			mana += item_6.mana;
+    		}
+    		if (item_6.manaPerLevel != null) {
+    			mana += item_6.manaPerLevel*build_level;
+    		}
+    	}
+    	$("#build_mana").html("").append("Mana: "+ mana);
     }
-    if (item_2 != null && item_2.mana != null) {
-    	mana += item_2.mana;
-    }
-    if (item_3 != null && item_3.mana != null) {
-    	mana += item_3.mana;
-    }
-    if (item_4 != null && item_4.mana != null) {
-    	mana += item_4.mana;
-    }
-    if (item_5 != null && item_5.mana != null) {
-    	mana += item_5.mana;
-    }
-    if (item_6 != null && item_6.mana != null) {
-    	mana += item_6.mana;
-    }
-    $("#build_mana").html("").append("Mana: "+ mana);
+    //TODO other stats here
     var cost = 0;
     // check resource here eventually
     if (item_1 != null && item_1.cost != null) {
