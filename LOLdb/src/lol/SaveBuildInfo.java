@@ -8,6 +8,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -29,11 +30,30 @@ public class SaveBuildInfo extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
-		// Champion champion = (Champion)
-		// request.getSession().getAttribute("champion");
+		Gson gson = new Gson();
 		String champion_json = request.getParameter("champion");
-		// String item_1 = request.getParameter("item_1");
+		Champion champion = gson.fromJson(champion_json, Champion.class);
+		String item1_json = request.getParameter("item1");
+		Item item1 = gson.fromJson(item1_json, Item.class);
+		String item2_json = request.getParameter("item2");
+		Item item2 = gson.fromJson(item2_json, Item.class);
+		String item3_json = request.getParameter("item3");
+		Item item3 = gson.fromJson(item3_json, Item.class);
+		String item4_json = request.getParameter("item4");
+		Item item4 = gson.fromJson(item4_json, Item.class);
+		String item5_json = request.getParameter("item5");
+		Item item5 = gson.fromJson(item5_json, Item.class);
+		String item6_json = request.getParameter("item6");
+		Item item6 = gson.fromJson(item6_json, Item.class);
+		ArrayList<Item> itemArray = new ArrayList<Item>();
+		itemArray.add(item1);
+		itemArray.add(item2);
+		itemArray.add(item3);
+		itemArray.add(item4);
+		itemArray.add(item5);
+		itemArray.add(item6);
+		Build build = new Build(champion);
+		build.setItems(itemArray);
 
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
@@ -46,11 +66,9 @@ public class SaveBuildInfo extends HttpServlet {
 		response.setHeader("Access-Control-Allow-Headers", "Content-Type");
 		response.setHeader("Access-Control-Max-Age", "86400");
 
-		Gson gson = new Gson();
 		JsonObject myObj = new JsonObject();
 
-		Champion champion = gson.fromJson(champion_json, Champion.class);
-		String guid = getInfo(champion);
+		String guid = getInfo(build);
 		JsonElement guidObj = gson.toJsonTree(guid);
 		if (guid == null) {
 			myObj.addProperty("success", false);
@@ -64,94 +82,8 @@ public class SaveBuildInfo extends HttpServlet {
 
 	}
 
-	private Champion getChampion(String championName) {
-
-		
-		Champion champion = new Champion();
-		Connection conn = null;
-		PreparedStatement stmt = null;
-		String sql = null;
-
-		try {
-			conn = DriverManager
-					.getConnection("jdbc:google:rdbms://league-of-legends-db:league-of-legends-db/LOL");
-
-			sql = "CALL champion_lookup( ? )";
-			stmt = conn.prepareStatement(sql);
-			stmt.setString(1, championName.trim());
-			ResultSet rs = stmt.executeQuery();
-
-			while (rs.next()) {
-				champion.setmID(rs.getInt("ID"));
-				champion.setmName(rs.getString("Name"));
-				champion.setmImagePath(rs.getString("ImagePath"));
-				champion.setmHealth(rs.getInt("Health"));
-				champion.setmHealthPerLevel(rs.getInt("HealthPerLevel"));
-				champion.setmHealthRegen(rs.getDouble("HealthRegen"));
-				champion.setmHealthRegenPerLevel(rs
-						.getDouble("HealthRegenPerLevel"));
-				// champion.setmResourceType(rs.getInt("ResourceID"));
-				champion.setmMana(rs.getInt("Mana"));
-				champion.setmManaPerLevel(rs.getDouble("ManaPerLevel"));
-				champion.setmManaRegen(rs.getDouble("ManaRegen"));
-				champion.setmManaRegenPerLevel(rs
-						.getDouble("ManaRegenPerLevel"));
-				champion.setmDamage(rs.getDouble("Damage"));
-				champion.setmDamagePerLevel(rs.getDouble("DamagePerLevel"));
-				champion.setmAttackSpeed(rs.getDouble("AttackSpeed"));
-				champion.setmAttackSpeedPerLevel(rs
-						.getDouble("AttackSpeedPerLevel"));
-				champion.setmArmor(rs.getDouble("Armor"));
-				champion.setmArmorPerLevel(rs.getDouble("ArmorPerLevel"));
-				champion.setmMagicResist(rs.getInt("MagicResist"));
-				champion.setmMagicResistPerLevel(rs
-						.getDouble("MagicResistPerLevel"));
-				champion.setmMoveSpeed(rs.getInt("MovementSpeed"));
-				champion.setmAttackRange(rs.getInt("AttackRange"));
-			}
-
-			rs.close();
-			stmt.close();
-			stmt = null;
-
-			conn.close();
-			conn = null;
-
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-
-		finally {
-
-			if (stmt != null) {
-				try {
-					stmt.close();
-				} catch (SQLException sqlex) {
-					// ignore -- as we can't do anything about it here
-				}
-
-				stmt = null;
-			}
-
-			if (conn != null) {
-				try {
-					conn.close();
-				} catch (SQLException sqlex) {
-					// ignore -- as we can't do anything about it here
-				}
-
-				conn = null;
-			}
-		}
-
-		return champion;
-
-	}
-
 	// Get Country Information
-	private String getInfo(Champion champion) {
-
-		Build build = new Build(champion);
+	private String getInfo(Build build) {
 		String guid = build.getGuid();
 		return guid;
 

@@ -65,6 +65,10 @@ public class Build {
 		moveSpeedMultiplier = 1;
 		attackRange = champ.getmAttackSpeed();
 	}
+	
+	public void setItems(ArrayList<Item> newItems) {
+		items = newItems;
+	}
 
 	public void setLevel(int newLevel) {
 		level = newLevel;

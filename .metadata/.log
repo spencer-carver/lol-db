@@ -9755,3 +9755,871 @@ Binding(ALT+SHIFT+ARROW_LEFT,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SESSION 2013-02-18 22:54:02.116 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.6.0_38
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.dsl.product
+Command-line arguments:  -data C:\Users\Spencer\Documents\Courses\Senior Year\Winter Term\CSSE 333\Project\lol-db -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.dsl.product
+
+!ENTRY org.eclipse.jface 2 0 2013-02-18 22:54:08.841
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 22:54:08.841
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1b124cfc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeAllInstances,Remove All Visible Results,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4e7c4246,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3fe329eb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-18 23:48:16.104
+!MESSAGE The site.xml file downloaded from the update site does not contain any <feature> elements with an id of 'com.google.appengine.eclipse.sdkbundle.e42.feature'. Unable to determine if there are updates available.
+
+!ENTRY com.google.gdt.eclipse.suite.ext 4 2 2013-02-18 23:48:16.853
+!MESSAGE Problems occurred when invoking code from plug-in: "com.google.gdt.eclipse.suite.ext".
+!STACK 0
+java.lang.NoClassDefFoundError: com/google/gdt/eclipse/suite/ext/update/ui/UpdateNotificationToastPopup$NotificationControlSelectedHandler
+	at com.google.gdt.eclipse.suite.ext.update.CompositeArtifactsDowloadJobChangeListener.notifyOfAvailableUpdates(CompositeArtifactsDowloadJobChangeListener.java:263)
+	at com.google.gdt.eclipse.suite.ext.update.CompositeArtifactsDowloadJobChangeListener.done(CompositeArtifactsDowloadJobChangeListener.java:147)
+	at org.eclipse.core.internal.jobs.JobListeners$3.notify(JobListeners.java:39)
+	at org.eclipse.core.internal.jobs.JobListeners.doNotify(JobListeners.java:112)
+	at org.eclipse.core.internal.jobs.JobListeners.done(JobListeners.java:152)
+	at org.eclipse.core.internal.jobs.JobManager.endJob(JobManager.java:647)
+	at org.eclipse.core.internal.jobs.WorkerPool.endJob(WorkerPool.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:70)
+Caused by: java.lang.ClassNotFoundException: com.google.gdt.eclipse.suite.ext.update.ui.UpdateNotificationToastPopup$NotificationControlSelectedHandler
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:501)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	... 8 more
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-18 23:48:20.606
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-18 23:50:06.474
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for CTRL+I:
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.active.elements,Format Active Elements,
+		Format active elements,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@2116aeb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.indent,Indent Line,
+		Indents the current line,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1605033a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.document,Format,
+		Format selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4d3e9963,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.format,Format,
+		Format the selected text,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@2316e021,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_UP:
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@7dd66aa9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@32d4a886,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.quick_outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@27840f7c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.show.outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4f14aa28,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.SaveImageAction,Export Diagram,
+		Export Diagram,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		org.eclipse.ui.internal.MakeHandlersGo@55af50a7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@68d82fe3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.open.file.from.source,Open Selection,
+		Open an editor on the selected link,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@493015db,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@73eb0266,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javascriptViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for CTRL+SHIFT+P:
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.m2e.core.ui.command.addPlugin,Add Maven Plugin,
+		Add Maven Plugin,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@49eab1fe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.core.runtime.xml,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.goto.matching.bracket,Matching Character,
+		Go to Matching Character,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@8a3cf3e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.matching.bracket,Go to Matching Bracket,
+		Moves the cursor to the matching bracket,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4f4bc09b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.add.block.comment,Add Block Comment,
+		Add Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@25d3e3f3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.add.block.comment,Add Block Comment,
+		Enclose the selection with a block comment,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@765228c8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_UP:
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.previousSibling,Previous Sibling,
+		Go to Previous Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6a0f0c67,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.previous.member,Go to Previous Member,
+		Move the caret to the previous member of the JavaScript file,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@bf39f28,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_DOWN:
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@26514577,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@27560139,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_RIGHT:
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@2c2e749c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@7f6a595b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.toggle.comment,Toggle Comment,
+		Toggle Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4b6995a2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1f10a6b7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for CTRL+SHIFT+\:
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.remove.block.comment,Remove Block Comment,
+		Remove Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1108565d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.remove.block.comment,Remove Block Comment,
+		Remove the block comment enclosing the selection,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@7e31484f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_DOWN:
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.nextSibling,Next Sibling,
+		Go to Next Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@2b0951aa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.next.member,Go to Next Member,
+		Move the caret to the next member of the JavaScript file,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@55827b42,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 23:51:34.808
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_LEFT:
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@621b6c74,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@696a55e9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-18 23:51:52.820
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-18 23:53:12.811
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-18 23:53:50.464
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:02:49.252
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:02:50.048
+!MESSAGE The site.xml file downloaded from the update site does not contain any <feature> elements with an id of 'com.google.appengine.eclipse.sdkbundle.e42.feature'. Unable to determine if there are updates available.
+
+!ENTRY com.google.gdt.eclipse.suite.ext 4 2 2013-02-19 00:02:50.083
+!MESSAGE Problems occurred when invoking code from plug-in: "com.google.gdt.eclipse.suite.ext".
+!STACK 0
+java.lang.NoClassDefFoundError: com/google/gdt/eclipse/suite/ext/update/ui/UpdateNotificationToastPopup$NotificationControlSelectedHandler
+	at com.google.gdt.eclipse.suite.ext.update.CompositeArtifactsDowloadJobChangeListener.notifyOfAvailableUpdates(CompositeArtifactsDowloadJobChangeListener.java:263)
+	at com.google.gdt.eclipse.suite.ext.update.CompositeArtifactsDowloadJobChangeListener.done(CompositeArtifactsDowloadJobChangeListener.java:147)
+	at org.eclipse.core.internal.jobs.JobListeners$3.notify(JobListeners.java:39)
+	at org.eclipse.core.internal.jobs.JobListeners.doNotify(JobListeners.java:112)
+	at org.eclipse.core.internal.jobs.JobListeners.done(JobListeners.java:152)
+	at org.eclipse.core.internal.jobs.JobManager.endJob(JobManager.java:647)
+	at org.eclipse.core.internal.jobs.WorkerPool.endJob(WorkerPool.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:70)
+Caused by: java.lang.ClassNotFoundException: com.google.gdt.eclipse.suite.ext.update.ui.UpdateNotificationToastPopup$NotificationControlSelectedHandler
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:501)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	... 8 more
+
+!ENTRY org.eclipse.ui 4 4 2013-02-19 00:03:26.193
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:05:00.628
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-19 00:05:07.923
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:07:28.920
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:11:15.769
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2013-02-19 00:18:09.412
+!MESSAGE No valid Android XML Editor Delegate found for file /LOLdb/war/WEB-INF/web.xml [Res null, type null]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2013-02-19 00:18:46.069
+!MESSAGE No projects found for [C:\Users\Spencer\Documents\Courses\Senior Year\Winter Term\CSSE 333\Project\lol-db\LOLdb\war\WEB-INF\web.xml]
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:18:53.647
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:19:33.693
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:21:21.280
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:22:38.326
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:25:51.805
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:30:52.855
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:32:02.435
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:35:25.762
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:36:40.201
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:45:50.222
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 00:51:22.226
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 01:04:04.391
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 01:06:55.450
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 01:08:22.242
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 01:17:39.431
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 01:21:55.560
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-19 01:22:07.533
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 01:45:52.455
+!MESSAGE Could not change permissions on the launch config file
+!SESSION 2013-02-19 10:36:13.955 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.6.0_38
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.dsl.product
+Command-line arguments:  -data C:\Users\Spencer\Documents\Courses\Senior Year\Winter Term\CSSE 333\Project\lol-db -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.dsl.product
+
+!ENTRY org.eclipse.jface 2 0 2013-02-19 10:36:20.834
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 10:36:20.834
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,Cut,
+		Cut the selection to the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1fb030d8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeAllInstances,Remove All Visible Results,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6856c528,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.RemoveAction,Remove,
+		Remove selected Pictogram Elements,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		org.eclipse.ui.internal.MakeHandlersGo@18a9fa9c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 10:48:46.332
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 10:52:51.014
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 10:56:11.148
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:02:00.926
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for CTRL+I:
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.active.elements,Format Active Elements,
+		Format active elements,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1fe26d9b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.indent,Indent Line,
+		Indents the current line,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1530e3d7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.document,Format,
+		Format selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@360088ee,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.format,Format,
+		Format the selected text,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3cbe431f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_UP:
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@384e57ba,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6f28c760,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.quick_outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@5e39a8a3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.show.outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1b6e95a9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.graphiti.ui.internal.action.SaveImageAction,Export Diagram,
+		Export Diagram,
+		Category(org.eclipse.graphiti.ui.Graphiti_Category,Edit,Graphiti Diagram Editor,true),
+		org.eclipse.ui.internal.MakeHandlersGo@79239850,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@fe4ea52,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.open.file.from.source,Open Selection,
+		Open an editor on the selected link,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@7dd3b5a4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@563a6285,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javascriptViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for CTRL+SHIFT+P:
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.m2e.core.ui.command.addPlugin,Add Maven Plugin,
+		Add Maven Plugin,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@131a35fd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.core.runtime.xml,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.goto.matching.bracket,Matching Character,
+		Go to Matching Character,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@204d080d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.matching.bracket,Go to Matching Bracket,
+		Moves the cursor to the matching bracket,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1dce7ed7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.add.block.comment,Add Block Comment,
+		Add Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@25d3e3f3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.add.block.comment,Add Block Comment,
+		Enclose the selection with a block comment,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@5fe9648a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_UP:
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.previousSibling,Previous Sibling,
+		Go to Previous Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@45715c20,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.previous.member,Go to Previous Member,
+		Move the caret to the previous member of the JavaScript file,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@53c7d137,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_DOWN:
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@7a94c5e7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@63789cd9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_RIGHT:
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@269fe5c5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3819d94,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.toggle.comment,Toggle Comment,
+		Toggle Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@dee55c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@2ff2ab91,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for CTRL+SHIFT+\:
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.remove.block.comment,Remove Block Comment,
+		Remove Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@20e2e869,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.remove.block.comment,Remove Block Comment,
+		Remove the block comment enclosing the selection,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.MakeHandlersGo@32906158,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.141
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_DOWN:
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.nextSibling,Next Sibling,
+		Go to Next Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6c9d2223,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.next.member,Go to Next Member,
+		Move the caret to the next member of the JavaScript file,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@24e6f257,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-19 11:06:17.142
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_LEFT:
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@672a375b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@363040ae,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:13:05.472
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:17:02.486
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:19:03.994
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:20:37.792
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:22:11.392
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:23:43.990
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:34:53.068
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:37:00.047
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:45:15.950
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:50:18.003
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:51:07.773
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 11:59:42.144
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-19 12:00:24.046
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 12:05:30.676
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-19 12:05:50.544
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 12:08:52.239
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-19 12:09:23.973
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 12:11:30.787
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-19 12:11:55.312
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 12:18:45.891
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-19 12:19:15.103
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2013-02-19 12:42:24.837
+!MESSAGE No valid Android XML Editor Delegate found for file /LOLdb/war/WEB-INF/web.xml [Res null, type null]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2013-02-19 12:42:58.371
+!MESSAGE No projects found for [C:\Users\Spencer\Documents\Courses\Senior Year\Winter Term\CSSE 333\Project\lol-db\LOLdb\war\WEB-INF\web.xml]
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 12:43:02.549
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY org.eclipse.ui 4 4 2013-02-19 12:43:29.266
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 12:45:52.109
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.gdt.eclipse.core 4 0 2013-02-19 12:47:34.069
+!MESSAGE Could not change permissions on the launch config file
+
+!ENTRY com.google.appengine.eclipse.core 1 0 2013-02-19 12:51:37.104
+!MESSAGE LOLdb successfully deployed to Google App Engine
+
+!ENTRY com.google.appengine.eclipse.core 1 0 2013-02-19 12:55:01.646
+!MESSAGE LOLdb successfully deployed to Google App Engine

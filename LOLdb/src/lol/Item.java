@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Item extends Modifier {
 	private int cost;
-	private String imagePath;
-
+	private String imagePath = "http://s.momento.com.au/uploads/images/2012/New%20Consumer%20Pages%202012/Covers_Classic_Grey_80px.jpg";
+	
 	public int getCost() {
 		return cost;
 	}

@@ -216,7 +216,7 @@ public abstract class Modifier {
 	public Modifier() {
 		mID = 0;
 		setmName("Placeholder");
-		guid = '0';
+		//guid = '0';
 		health = 0;
 		healthPerLevel = 0;
 		healthRegen = 0;
@@ -245,5 +245,13 @@ public abstract class Modifier {
 
 	public void setmName(String name) {
 		this.name = name;
+	}
+	
+	public int getmID() {
+		return mID;
+	}
+	
+	public void setmID(int id) {
+		mID = id;
 	}
 }

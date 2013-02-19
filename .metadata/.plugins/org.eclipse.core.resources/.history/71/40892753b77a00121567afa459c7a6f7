@@ -1,0 +1,89 @@
+package lol;
+
+import com.google.gson.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SaveBuildInfo extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	public SaveBuildInfo() {
+		super();
+	}
+
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		Gson gson = new Gson();
+		String champion_json = request.getParameter("champion");
+		Champion champion = gson.fromJson(champion_json, Champion.class);
+		String item1_json = request.getParameter("item1");
+		Item item1 = gson.fromJson(item1_json, Item.class);
+		String item2_json = request.getParameter("item2");
+		Item item2 = gson.fromJson(item1_json, Item.class);
+		String item3_json = request.getParameter("item3");
+		Item item3 = gson.fromJson(item1_json, Item.class);
+		String item4_json = request.getParameter("item4");
+		Item item4 = gson.fromJson(item1_json, Item.class);
+		String item5_json = request.getParameter("item5");
+		Item item5 = gson.fromJson(item1_json, Item.class);
+		String item6_json = request.getParameter("item6");
+		Item item6 = gson.fromJson(item1_json, Item.class);
+		ArrayList<Item> itemArray = new ArrayList<Item>();
+		itemArray.add(item1);
+		itemArray.add(item2);
+		Build build = new Build(champion);
+		build.setItems(itemArray);
+		// String item_1 = request.getParameter("item_1");
+
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html");
+		response.setHeader("Cache-control", "no-cache, no-store");
+		response.setHeader("Pragma", "no-cache");
+		response.setHeader("Expires", "-1");
+
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		response.setHeader("Access-Control-Allow-Methods", "POST");
+		response.setHeader("Access-Control-Allow-Headers", "Content-Type");
+		response.setHeader("Access-Control-Max-Age", "86400");
+
+		JsonObject myObj = new JsonObject();
+
+		String guid = getInfo(build);
+		JsonElement guidObj = gson.toJsonTree(guid);
+		if (guid == null) {
+			myObj.addProperty("success", false);
+		} else {
+			myObj.addProperty("success", true);
+		}
+		myObj.add("guid", guidObj);
+		out.println(myObj.toString());
+
+		out.close();
+
+	}
+
+	// Get Country Information
+	private String getInfo(Build build) {
+		String guid = build.getGuid();
+		return guid;
+
+	}
+
+}

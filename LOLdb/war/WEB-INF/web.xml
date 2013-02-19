@@ -29,6 +29,16 @@
 		<url-pattern>/ChampionNames</url-pattern>
 	</servlet-mapping>
 	<servlet>
+		<description>Get List of Item Names - jQuery Ajax Request</description>
+		<display-name>ItemNames</display-name>
+		<servlet-name>ItemNames</servlet-name>
+		<servlet-class>lol.ItemNames</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ItemNames</servlet-name>
+		<url-pattern>/ItemNames</url-pattern>
+	</servlet-mapping>
+	<servlet>
 		<description>Get Information about an Item - jQuery Ajax Request</description>
 		<display-name>ItemInfo</display-name>
 		<servlet-name>ItemInfo</servlet-name>
@@ -47,6 +57,16 @@
 	<servlet-mapping>
 		<servlet-name>SaveBuildInfo</servlet-name>
 		<url-pattern>/SaveBuildInfo</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Retrieve Information about a Build - jQuery Ajax Request</description>
+		<display-name>GetBuildInfo</display-name>
+		<servlet-name>GetBuildInfo</servlet-name>
+		<servlet-class>lol.GetBuildInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetBuildInfo</servlet-name>
+		<url-pattern>/GetBuildInfo</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>SystemServiceServlet</servlet-name>
